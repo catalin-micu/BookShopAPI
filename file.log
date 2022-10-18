@@ -1,0 +1,2520 @@
+select pg_catalog.version()
+[raw sql] {}
+select current_schema()
+[raw sql] {}
+show standard_conforming_strings
+[raw sql] {}
+BEGIN (implicit)
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+[generated in 0.00017s] {'name': 'apscheduler_jobs'}
+COMMIT
+SELECT apscheduler_jobs.id, apscheduler_jobs.job_state 
+FROM apscheduler_jobs 
+WHERE apscheduler_jobs.next_run_time <= %(next_run_time_1)s ORDER BY apscheduler_jobs.next_run_time
+[generated in 0.00646s] {'next_run_time_1': 1665924384.448999}
+SELECT apscheduler_jobs.next_run_time 
+FROM apscheduler_jobs 
+WHERE apscheduler_jobs.next_run_time IS NOT NULL ORDER BY apscheduler_jobs.next_run_time 
+ LIMIT %(param_1)s
+[generated in 0.00248s] {'param_1': 1}
+ * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+Headers:
+Host: 127.0.0.1:5000
+Connection: keep-alive
+Cache-Control: max-age=0
+Sec-Ch-Ua: "Chromium";v="106", "Microsoft Edge";v="106", "Not;A=Brand";v="99"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.42
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,ro;q=0.8
+
+
+127.0.0.1 - - [16/Oct/2022 15:46:30] "GET / HTTP/1.1" 200 -
+Headers:
+Host: 127.0.0.1:5000
+Connection: keep-alive
+Sec-Ch-Ua: "Chromium";v="106", "Microsoft Edge";v="106", "Not;A=Brand";v="99"
+Sec-Ch-Ua-Mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.42
+Sec-Ch-Ua-Platform: "Windows"
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://127.0.0.1:5000/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,ro;q=0.8
+If-Modified-Since: Mon, 10 Oct 2022 12:44:46 GMT
+
+
+Headers:
+Host: 127.0.0.1:5000
+Connection: keep-alive
+Sec-Ch-Ua: "Chromium";v="106", "Microsoft Edge";v="106", "Not;A=Brand";v="99"
+Sec-Ch-Ua-Mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.42
+Sec-Ch-Ua-Platform: "Windows"
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://127.0.0.1:5000/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,ro;q=0.8
+If-Modified-Since: Mon, 10 Oct 2022 12:44:46 GMT
+
+
+Headers:
+Host: 127.0.0.1:5000
+Connection: keep-alive
+Sec-Ch-Ua: "Chromium";v="106", "Microsoft Edge";v="106", "Not;A=Brand";v="99"
+Sec-Ch-Ua-Mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.42
+Sec-Ch-Ua-Platform: "Windows"
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: script
+Referer: http://127.0.0.1:5000/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,ro;q=0.8
+If-Modified-Since: Mon, 10 Oct 2022 12:44:46 GMT
+
+
+Headers:
+Host: 127.0.0.1:5000
+Connection: keep-alive
+Sec-Ch-Ua: "Chromium";v="106", "Microsoft Edge";v="106", "Not;A=Brand";v="99"
+Sec-Ch-Ua-Mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.42
+Sec-Ch-Ua-Platform: "Windows"
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: script
+Referer: http://127.0.0.1:5000/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,ro;q=0.8
+If-Modified-Since: Mon, 10 Oct 2022 12:44:46 GMT
+
+
+127.0.0.1 - - [16/Oct/2022 15:46:30] "[36mGET /swaggerui/droid-sans.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [16/Oct/2022 15:46:30] "[36mGET /swaggerui/swagger-ui.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [16/Oct/2022 15:46:30] "[36mGET /swaggerui/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [16/Oct/2022 15:46:30] "[36mGET /swaggerui/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+Headers:
+Host: 127.0.0.1:5000
+Connection: keep-alive
+Sec-Ch-Ua: "Chromium";v="106", "Microsoft Edge";v="106", "Not;A=Brand";v="99"
+Accept: application/json,*/*
+Sec-Ch-Ua-Mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.42
+Sec-Ch-Ua-Platform: "Windows"
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://127.0.0.1:5000/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,ro;q=0.8
+
+
+127.0.0.1 - - [16/Oct/2022 15:46:30] "GET /swagger.json HTTP/1.1" 200 -
+Headers:
+Host: 127.0.0.1:5000
+Connection: keep-alive
+Sec-Ch-Ua: "Chromium";v="106", "Microsoft Edge";v="106", "Not;A=Brand";v="99"
+Sec-Ch-Ua-Mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.42
+Sec-Ch-Ua-Platform: "Windows"
+Accept: image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://127.0.0.1:5000/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,ro;q=0.8
+If-Modified-Since: Mon, 10 Oct 2022 12:44:46 GMT
+
+
+127.0.0.1 - - [16/Oct/2022 15:46:30] "[36mGET /swaggerui/favicon-32x32.png HTTP/1.1[0m" 304 -
+Headers:
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 2d066874-ba7e-445b-aae5-a2697c6b6273
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 68
+
+
+Body:
+b'{"email": "catalin.userr@gmail.com", "passwd": "", "is_admin": true}'
+127.0.0.1 - - [16/Oct/2022 15:50:59] "[31m[1mPOST /auth/register HTTP/1.1[0m" 400 -
+Headers:
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: ad868933-d567-4fb8-aa41-91118c433819
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 79
+
+
+Body:
+b'{"email": "catalin.userr@gmail.com", "passwd": "Password-12", "is_admin": true}'
+select pg_catalog.version()
+[raw sql] {}
+select current_schema()
+[raw sql] {}
+show standard_conforming_strings
+[raw sql] {}
+BEGIN (implicit)
+INSERT INTO users (email, passwd, is_admin) VALUES (%(email)s, %(passwd)s, %(is_admin)s) RETURNING users.email, users.is_admin
+[no key 0.00020s] {'email': 'catalin.userr@gmail.com', 'passwd': 'sha256$sXwFml045cuol6n3$0a88e9551594baa9adc8c97e7befb3ab169406d84eb1aa98fe36b64d545307d5', 'is_admin': False}
+COMMIT
+127.0.0.1 - - [16/Oct/2022 15:51:19] "[35m[1mPOST /auth/register HTTP/1.1[0m" 201 -
+Headers:
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 71537956-545c-467d-98b9-3785eaee1260
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 79
+
+
+Body:
+b'{"email": "catalin.userr@gmail.com", "passwd": "Password-12", "is_admin": true}'
+BEGIN (implicit)
+INSERT INTO users (email, passwd, is_admin) VALUES (%(email)s, %(passwd)s, %(is_admin)s) RETURNING users.email, users.is_admin
+[no key 0.00026s] {'email': 'catalin.userr@gmail.com', 'passwd': 'sha256$y67uLnafqRXcPFsp$30202cfef0713680726c1cebb36818e041dda08499c8ac7791c32be06b72680c', 'is_admin': False}
+ROLLBACK
+127.0.0.1 - - [16/Oct/2022 15:51:45] "[31m[1mPOST /auth/register HTTP/1.1[0m" 403 -
+Headers:
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 32d01211-0e27-4de2-8ebd-c10fe9c83a1c
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 74
+
+
+Body:
+b'{\r\n    "email": "catalin.userr@gmail.com",\r\n    "passwd": "Password-12"\r\n}'
+BEGIN (implicit)
+SELECT users.user_id, users.email, users.passwd, users.is_admin 
+FROM users 
+WHERE users.email = %(email_1)s
+[generated in 0.00043s] {'email_1': 'catalin.userr@gmail.com'}
+ROLLBACK
+127.0.0.1 - - [16/Oct/2022 15:52:27] "POST /auth/login HTTP/1.1" 200 -
+Headers:
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 0188513d-6678-492c-b725-28de4693196d
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 73
+
+
+Body:
+b'{\r\n    "email": "catalin.userr@gmail.com",\r\n    "passwd": "Password12"\r\n}'
+127.0.0.1 - - [16/Oct/2022 15:52:38] "[31m[1mPOST /auth/login HTTP/1.1[0m" 400 -
+Headers:
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 04c2222b-f132-4d33-84fb-45bf0fa28d08
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 74
+
+
+Body:
+b'{\r\n    "email": "catalin.userr@gmail.com",\r\n    "passwd": "Password-12"\r\n}'
+BEGIN (implicit)
+SELECT users.user_id, users.email, users.passwd, users.is_admin 
+FROM users 
+WHERE users.email = %(email_1)s
+[cached since 29.62s ago] {'email_1': 'catalin.userr@gmail.com'}
+ROLLBACK
+127.0.0.1 - - [16/Oct/2022 15:52:57] "POST /auth/login HTTP/1.1" 200 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NTkyNDc3NywianRpIjoiM2NjZjIwYzctM2MwMy00MzFjLTlmMjAtY2Q0NzAwNjllM2E2IiwidHlwZSI6InJlZnJlc2giLCJzdWIiOiJjYXRhbGluLnVzZXJyQGdtYWlsLmNvbSIsIm5iZiI6MTY2NTkyNDc3NywiZXhwIjoxNjY2MDA3NTc3fQ.Cyg9L3M93dQ7Ffbfi5ftyk6IvnLJfJo8kx8elpIX23s
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 508e4cd5-7fa5-4749-8841-16fcaf8df9a6
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+
+
+127.0.0.1 - - [16/Oct/2022 15:53:43] "GET /auth/refresh HTTP/1.1" 200 -
+Headers:
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: ba61c688-6da8-4baa-bd4d-c3dbd7960d95
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+
+
+127.0.0.1 - - [16/Oct/2022 15:53:53] "[31m[1mGET /auth/refresh HTTP/1.1[0m" 401 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NTkyNDc3NywianRpIjoiY2Q5N2JiYWUtMGQzYi00YTk2LTliYWEtY2NjYjcyZjE0ODdhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4udXNlcnJAZ21haWwuY29tIiwibmJmIjoxNjY1OTI0Nzc3LCJleHAiOjE2NjYwMDc1Nzd9.zVR-3Op3ULPj7ndZyjpNflV9qUaZszrI8KT-ZjjcX-w
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 5126cb0a-fa55-4f2d-b0b9-6b9cfffc18ac
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+
+
+127.0.0.1 - - [16/Oct/2022 15:54:10] "[31m[1mGET /auth/refresh HTTP/1.1[0m" 422 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NTY2MTU2OCwianRpIjoiYjQyZjM1OTktZjdlYy00NzU3LTg5YjEtOWU5ZjE4MzJiM2VhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4uYWRtaW5AZ21haWwuY29tIiwibmJmIjoxNjY1NjYxNTY4LCJleHAiOjE2NjU3NDQzNjh9.7p81Kt-6Cob_n6mST5-T7gwX24AH-wSugCU0pwnPB9E
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: f36630a9-99b5-4198-80aa-4ab35b614a80
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+
+
+127.0.0.1 - - [16/Oct/2022 15:55:16] "[31m[1mGET /admins/categories HTTP/1.1[0m" 401 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NTkyNDc3NywianRpIjoiY2Q5N2JiYWUtMGQzYi00YTk2LTliYWEtY2NjYjcyZjE0ODdhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4udXNlcnJAZ21haWwuY29tIiwibmJmIjoxNjY1OTI0Nzc3LCJleHAiOjE2NjYwMDc1Nzd9.zVR-3Op3ULPj7ndZyjpNflV9qUaZszrI8KT-ZjjcX-w
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 9ea3c228-3f5d-4a9c-b740-4f3d8665a6c7
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+
+
+BEGIN (implicit)
+SELECT users.user_id, users.email, users.passwd, users.is_admin 
+FROM users 
+WHERE users.email = %(email_1)s
+[cached since 175.7s ago] {'email_1': 'catalin.userr@gmail.com'}
+ROLLBACK
+127.0.0.1 - - [16/Oct/2022 15:55:23] "[31m[1mGET /admins/categories HTTP/1.1[0m" 403 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NTkxOTAwMCwianRpIjoiMDY4OTk1ZTItZjRjMC00OWEzLWJkYjktZDA3ZDgxMWI0MDIxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4uYWRtaW5AZ21haWwuY29tIiwibmJmIjoxNjY1OTE5MDAwLCJleHAiOjE2NjYwMDE4MDB9.Evm_hJgpiduC1Y7TLPVuhZ1qy0HXzjvcj2A0c8d3iBQ
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: f0f6cb47-df43-4f73-abbf-eb8fab395ee8
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+
+
+BEGIN (implicit)
+SELECT users.user_id, users.email, users.passwd, users.is_admin 
+FROM users 
+WHERE users.email = %(email_1)s
+[cached since 195.8s ago] {'email_1': 'catalin.admin@gmail.com'}
+ROLLBACK
+BEGIN (implicit)
+SELECT categories.category_id, categories.category_name 
+FROM categories
+[generated in 0.00018s] {}
+ROLLBACK
+127.0.0.1 - - [16/Oct/2022 15:55:43] "GET /admins/categories HTTP/1.1" 200 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NTkxOTAwMCwianRpIjoiMDY4OTk1ZTItZjRjMC00OWEzLWJkYjktZDA3ZDgxMWI0MDIxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4uYWRtaW5AZ21haWwuY29tIiwibmJmIjoxNjY1OTE5MDAwLCJleHAiOjE2NjYwMDE4MDB9.Evm_hJgpiduC1Y7TLPVuhZ1qy0HXzjvcj2A0c8d3iBQ
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 6f204b54-f4cd-4e73-b9d3-d86d33c5ffdb
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 37
+
+
+Body:
+b'{\r\n    "category_name": "thriller"\r\n}'
+BEGIN (implicit)
+SELECT users.user_id, users.email, users.passwd, users.is_admin 
+FROM users 
+WHERE users.email = %(email_1)s
+[cached since 246.1s ago] {'email_1': 'catalin.admin@gmail.com'}
+ROLLBACK
+BEGIN (implicit)
+INSERT INTO categories (category_name) VALUES (%(category_name)s) RETURNING categories.category_name
+[no key 0.00009s] {'category_name': 'thriller'}
+COMMIT
+127.0.0.1 - - [16/Oct/2022 15:56:33] "[35m[1mPOST /admins/categories HTTP/1.1[0m" 201 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NTkxOTAwMCwianRpIjoiMDY4OTk1ZTItZjRjMC00OWEzLWJkYjktZDA3ZDgxMWI0MDIxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4uYWRtaW5AZ21haWwuY29tIiwibmJmIjoxNjY1OTE5MDAwLCJleHAiOjE2NjYwMDE4MDB9.Evm_hJgpiduC1Y7TLPVuhZ1qy0HXzjvcj2A0c8d3iBQ
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: d99ec6f1-f773-4eb5-8190-a7e009f9af61
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 37
+
+
+Body:
+b'{\r\n    "category_name": "thriller"\r\n}'
+BEGIN (implicit)
+SELECT users.user_id, users.email, users.passwd, users.is_admin 
+FROM users 
+WHERE users.email = %(email_1)s
+[cached since 255.2s ago] {'email_1': 'catalin.admin@gmail.com'}
+ROLLBACK
+BEGIN (implicit)
+INSERT INTO categories (category_name) VALUES (%(category_name)s) RETURNING categories.category_name
+[no key 0.00019s] {'category_name': 'thriller'}
+ROLLBACK
+127.0.0.1 - - [16/Oct/2022 15:56:42] "[31m[1mPOST /admins/categories HTTP/1.1[0m" 409 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NTkxOTAwMCwianRpIjoiMDY4OTk1ZTItZjRjMC00OWEzLWJkYjktZDA3ZDgxMWI0MDIxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4uYWRtaW5AZ21haWwuY29tIiwibmJmIjoxNjY1OTE5MDAwLCJleHAiOjE2NjYwMDE4MDB9.Evm_hJgpiduC1Y7TLPVuhZ1qy0HXzjvcj2A0c8d3iBQ
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: aeb9fe33-f513-4e3f-b3cd-7729a36b64b5
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 61
+
+
+Body:
+b'{\r\n    "old_category": "sci-fi",\r\n    "new_category": "sf"\r\n}'
+BEGIN (implicit)
+SELECT users.user_id, users.email, users.passwd, users.is_admin 
+FROM users 
+WHERE users.email = %(email_1)s
+[cached since 292.3s ago] {'email_1': 'catalin.admin@gmail.com'}
+ROLLBACK
+BEGIN (implicit)
+UPDATE categories SET category_name=%(category_name)s WHERE categories.category_name = %(category_name_1)s RETURNING categories.category_id, categories.category_name
+[generated in 0.00033s] {'category_name': 'sf', 'category_name_1': 'sci-fi'}
+COMMIT
+127.0.0.1 - - [16/Oct/2022 15:57:20] "PATCH /admins/categories HTTP/1.1" 200 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NTkxOTAwMCwianRpIjoiMDY4OTk1ZTItZjRjMC00OWEzLWJkYjktZDA3ZDgxMWI0MDIxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4uYWRtaW5AZ21haWwuY29tIiwibmJmIjoxNjY1OTE5MDAwLCJleHAiOjE2NjYwMDE4MDB9.Evm_hJgpiduC1Y7TLPVuhZ1qy0HXzjvcj2A0c8d3iBQ
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 23a28a81-dd3b-42dd-86c6-5165db3edf00
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 61
+
+
+Body:
+b'{\r\n    "old_category": "sci-fi",\r\n    "new_category": "sf"\r\n}'
+BEGIN (implicit)
+SELECT users.user_id, users.email, users.passwd, users.is_admin 
+FROM users 
+WHERE users.email = %(email_1)s
+[cached since 296.8s ago] {'email_1': 'catalin.admin@gmail.com'}
+ROLLBACK
+BEGIN (implicit)
+UPDATE categories SET category_name=%(category_name)s WHERE categories.category_name = %(category_name_1)s RETURNING categories.category_id, categories.category_name
+[cached since 4.556s ago] {'category_name': 'sf', 'category_name_1': 'sci-fi'}
+COMMIT
+127.0.0.1 - - [16/Oct/2022 15:57:24] "[33mPATCH /admins/categories HTTP/1.1[0m" 404 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NTkxOTAwMCwianRpIjoiMDY4OTk1ZTItZjRjMC00OWEzLWJkYjktZDA3ZDgxMWI0MDIxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4uYWRtaW5AZ21haWwuY29tIiwibmJmIjoxNjY1OTE5MDAwLCJleHAiOjE2NjYwMDE4MDB9.Evm_hJgpiduC1Y7TLPVuhZ1qy0HXzjvcj2A0c8d3iBQ
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 9f0e8980-66d8-401a-8553-4c21c8b14ec9
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 37
+
+
+Body:
+b'{\r\n    "category_name": "thriller"\r\n}'
+BEGIN (implicit)
+SELECT users.user_id, users.email, users.passwd, users.is_admin 
+FROM users 
+WHERE users.email = %(email_1)s
+[cached since 323.6s ago] {'email_1': 'catalin.admin@gmail.com'}
+ROLLBACK
+BEGIN (implicit)
+DELETE FROM categories WHERE categories.category_name = %(category_name_1)s RETURNING categories.category_id, categories.category_name
+[generated in 0.00030s] {'category_name_1': 'thriller'}
+COMMIT
+127.0.0.1 - - [16/Oct/2022 15:57:51] "DELETE /admins/categories HTTP/1.1" 200 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NTkxOTAwMCwianRpIjoiMDY4OTk1ZTItZjRjMC00OWEzLWJkYjktZDA3ZDgxMWI0MDIxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4uYWRtaW5AZ21haWwuY29tIiwibmJmIjoxNjY1OTE5MDAwLCJleHAiOjE2NjYwMDE4MDB9.Evm_hJgpiduC1Y7TLPVuhZ1qy0HXzjvcj2A0c8d3iBQ
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 7213fdc5-68a0-459d-9951-4ce02f2414e8
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 37
+
+
+Body:
+b'{\r\n    "category_name": "thriller"\r\n}'
+BEGIN (implicit)
+SELECT users.user_id, users.email, users.passwd, users.is_admin 
+FROM users 
+WHERE users.email = %(email_1)s
+[cached since 330.9s ago] {'email_1': 'catalin.admin@gmail.com'}
+ROLLBACK
+BEGIN (implicit)
+DELETE FROM categories WHERE categories.category_name = %(category_name_1)s RETURNING categories.category_id, categories.category_name
+[cached since 7.297s ago] {'category_name_1': 'thriller'}
+COMMIT
+127.0.0.1 - - [16/Oct/2022 15:57:58] "[33mDELETE /admins/categories HTTP/1.1[0m" 404 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NTY2MTU2OCwianRpIjoiYjQyZjM1OTktZjdlYy00NzU3LTg5YjEtOWU5ZjE4MzJiM2VhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4uYWRtaW5AZ21haWwuY29tIiwibmJmIjoxNjY1NjYxNTY4LCJleHAiOjE2NjU3NDQzNjh9.7p81Kt-6Cob_n6mST5-T7gwX24AH-wSugCU0pwnPB9E
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 5c856e00-1035-4d37-b31e-56f213ce0a15
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+
+
+127.0.0.1 - - [16/Oct/2022 15:59:44] "[31m[1mGET /admins/books?filter=category_name&filter-values=fantasy,western&order=price HTTP/1.1[0m" 401 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NTkxOTAwMCwianRpIjoiMDY4OTk1ZTItZjRjMC00OWEzLWJkYjktZDA3ZDgxMWI0MDIxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4uYWRtaW5AZ21haWwuY29tIiwibmJmIjoxNjY1OTE5MDAwLCJleHAiOjE2NjYwMDE4MDB9.Evm_hJgpiduC1Y7TLPVuhZ1qy0HXzjvcj2A0c8d3iBQ
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 6f8fbaa5-0a99-4e24-bf0a-21e826adf0ce
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+
+
+BEGIN (implicit)
+SELECT users.user_id, users.email, users.passwd, users.is_admin 
+FROM users 
+WHERE users.email = %(email_1)s
+[cached since 443.9s ago] {'email_1': 'catalin.admin@gmail.com'}
+ROLLBACK
+BEGIN (implicit)
+SELECT books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock 
+FROM books JOIN categories ON categories.category_id = books.category_id 
+WHERE categories.category_name IN (%(category_name_1_1)s, %(category_name_1_2)s) ORDER BY books.price
+[generated in 0.00042s] {'category_name_1_1': 'fantasy', 'category_name_1_2': 'western'}
+ROLLBACK
+127.0.0.1 - - [16/Oct/2022 15:59:51] "GET /admins/books?filter=category_name&filter-values=fantasy,western&order=price HTTP/1.1" 200 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NTkxOTAwMCwianRpIjoiMDY4OTk1ZTItZjRjMC00OWEzLWJkYjktZDA3ZDgxMWI0MDIxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4uYWRtaW5AZ21haWwuY29tIiwibmJmIjoxNjY1OTE5MDAwLCJleHAiOjE2NjYwMDE4MDB9.Evm_hJgpiduC1Y7TLPVuhZ1qy0HXzjvcj2A0c8d3iBQ
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 3a5787a2-2e00-4b24-98ad-73f24e2e53d1
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+
+
+BEGIN (implicit)
+SELECT users.user_id, users.email, users.passwd, users.is_admin 
+FROM users 
+WHERE users.email = %(email_1)s
+[cached since 481.3s ago] {'email_1': 'catalin.admin@gmail.com'}
+ROLLBACK
+BEGIN (implicit)
+SELECT books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock 
+FROM books JOIN categories ON categories.category_id = books.category_id 
+WHERE categories.category_name IN (%(category_name_1_1)s, %(category_name_1_2)s) ORDER BY books.price
+[cached since 37.4s ago] {'category_name_1_1': 'fantasy updated', 'category_name_1_2': 'western'}
+ROLLBACK
+127.0.0.1 - - [16/Oct/2022 16:00:29] "GET /admins/books?filter=category_name&filter-values=fantasy%20updated,western&order=price HTTP/1.1" 200 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NTkxOTAwMCwianRpIjoiMDY4OTk1ZTItZjRjMC00OWEzLWJkYjktZDA3ZDgxMWI0MDIxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4uYWRtaW5AZ21haWwuY29tIiwibmJmIjoxNjY1OTE5MDAwLCJleHAiOjE2NjYwMDE4MDB9.Evm_hJgpiduC1Y7TLPVuhZ1qy0HXzjvcj2A0c8d3iBQ
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 1bc42811-5c0c-4585-ba67-8927295fde3f
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+
+
+BEGIN (implicit)
+SELECT users.user_id, users.email, users.passwd, users.is_admin 
+FROM users 
+WHERE users.email = %(email_1)s
+[cached since 525.5s ago] {'email_1': 'catalin.admin@gmail.com'}
+ROLLBACK
+BEGIN (implicit)
+SELECT books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock 
+FROM books JOIN categories ON categories.category_id = books.category_id 
+WHERE categories.category_name IN (%(category_name_1_1)s, %(category_name_1_2)s) ORDER BY books.price DESC
+[generated in 0.00028s] {'category_name_1_1': 'fantasy updated', 'category_name_1_2': 'western'}
+ROLLBACK
+127.0.0.1 - - [16/Oct/2022 16:01:13] "GET /admins/books?filter=category_name&filter-values=fantasy%20updated,western&order=price&order-descending=true HTTP/1.1" 200 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NTkxOTAwMCwianRpIjoiMDY4OTk1ZTItZjRjMC00OWEzLWJkYjktZDA3ZDgxMWI0MDIxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4uYWRtaW5AZ21haWwuY29tIiwibmJmIjoxNjY1OTE5MDAwLCJleHAiOjE2NjYwMDE4MDB9.Evm_hJgpiduC1Y7TLPVuhZ1qy0HXzjvcj2A0c8d3iBQ
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 5b26ed0f-3997-4ffe-90de-a08fb8fb8a43
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 174
+
+
+Body:
+b'{\r\n         "title": "title demo",\r\n         "year_published": 2002,\r\n         "author": "me",\r\n         "price": 777,\r\n         "category_id": 2,\r\n         "stock": 0\r\n    }'
+BEGIN (implicit)
+SELECT users.user_id, users.email, users.passwd, users.is_admin 
+FROM users 
+WHERE users.email = %(email_1)s
+[cached since 595.8s ago] {'email_1': 'catalin.admin@gmail.com'}
+ROLLBACK
+BEGIN (implicit)
+INSERT INTO books (title, year_published, author, price, category_id, stock) VALUES (%(title)s, %(year_published)s, %(author)s, %(price)s, %(category_id)s, %(stock)s) RETURNING books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock
+[no key 0.00016s] {'title': 'title demo', 'year_published': 2002, 'author': 'me', 'price': 777, 'category_id': 2, 'stock': 0}
+COMMIT
+127.0.0.1 - - [16/Oct/2022 16:02:23] "[35m[1mPOST /admins/books HTTP/1.1[0m" 201 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NTkxOTAwMCwianRpIjoiMDY4OTk1ZTItZjRjMC00OWEzLWJkYjktZDA3ZDgxMWI0MDIxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4uYWRtaW5AZ21haWwuY29tIiwibmJmIjoxNjY1OTE5MDAwLCJleHAiOjE2NjYwMDE4MDB9.Evm_hJgpiduC1Y7TLPVuhZ1qy0HXzjvcj2A0c8d3iBQ
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 5b7da58b-8c56-4f9d-9c9b-3af17bd87cd0
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+
+
+BEGIN (implicit)
+SELECT users.user_id, users.email, users.passwd, users.is_admin 
+FROM users 
+WHERE users.email = %(email_1)s
+[cached since 655s ago] {'email_1': 'catalin.admin@gmail.com'}
+ROLLBACK
+BEGIN (implicit)
+SELECT books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock 
+FROM books JOIN categories ON categories.category_id = books.category_id 
+WHERE categories.category_name IN (%(category_name_1_1)s, %(category_name_1_2)s) ORDER BY books.price
+[cached since 211.1s ago] {'category_name_1_1': 'fantasy updated', 'category_name_1_2': 'western'}
+ROLLBACK
+127.0.0.1 - - [16/Oct/2022 16:03:22] "GET /admins/books?filter=category_name&filter-values=fantasy%20updated,western&order=price HTTP/1.1" 200 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NTgzMjkyOCwianRpIjoiMmIzZDUzOWQtZGM0Ny00MDI0LWExN2UtZmUwNGZjZjQ4MWU0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4uYWRtaW5AZ21haWwuY29tIiwibmJmIjoxNjY1ODMyOTI4LCJleHAiOjE2NjU5MTU3Mjh9.7t4Mcyb0AmMXVv0elbGOk8lTz2LihpRfetIMtsuPJEs
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 6a217264-8022-4475-a35a-7386f61ce626
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 136
+
+
+Body:
+b'{\r\n         "title": "title demo",\r\n         "year_published": 2023,\r\n         "author": "author updated",\r\n         "stock": 990\r\n    }'
+127.0.0.1 - - [16/Oct/2022 16:04:18] "[31m[1mPATCH /admins/books HTTP/1.1[0m" 401 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NTkxOTAwMCwianRpIjoiMDY4OTk1ZTItZjRjMC00OWEzLWJkYjktZDA3ZDgxMWI0MDIxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4uYWRtaW5AZ21haWwuY29tIiwibmJmIjoxNjY1OTE5MDAwLCJleHAiOjE2NjYwMDE4MDB9.Evm_hJgpiduC1Y7TLPVuhZ1qy0HXzjvcj2A0c8d3iBQ
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: cd27abe8-459f-4c91-a843-8243d09579fb
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 136
+
+
+Body:
+b'{\r\n         "title": "title demo",\r\n         "year_published": 2023,\r\n         "author": "author updated",\r\n         "stock": 990\r\n    }'
+BEGIN (implicit)
+SELECT users.user_id, users.email, users.passwd, users.is_admin 
+FROM users 
+WHERE users.email = %(email_1)s
+[cached since 718.3s ago] {'email_1': 'catalin.admin@gmail.com'}
+ROLLBACK
+BEGIN (implicit)
+UPDATE books SET title=%(title)s, year_published=%(year_published)s, author=%(author)s WHERE books.title = %(title_1)s RETURNING books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock
+[generated in 0.00020s] {'title': 'title demo', 'year_published': 2023, 'author': 'author updated', 'title_1': 'title demo'}
+ROLLBACK
+127.0.0.1 - - [16/Oct/2022 16:04:26] "[31m[1mPATCH /admins/books HTTP/1.1[0m" 409 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NTkxOTAwMCwianRpIjoiMDY4OTk1ZTItZjRjMC00OWEzLWJkYjktZDA3ZDgxMWI0MDIxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4uYWRtaW5AZ21haWwuY29tIiwibmJmIjoxNjY1OTE5MDAwLCJleHAiOjE2NjYwMDE4MDB9.Evm_hJgpiduC1Y7TLPVuhZ1qy0HXzjvcj2A0c8d3iBQ
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 89578ab5-0118-421e-bd35-eab4917a45e0
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 136
+
+
+Body:
+b'{\r\n         "title": "title demo",\r\n         "year_published": 2022,\r\n         "author": "author updated",\r\n         "stock": 990\r\n    }'
+BEGIN (implicit)
+SELECT users.user_id, users.email, users.passwd, users.is_admin 
+FROM users 
+WHERE users.email = %(email_1)s
+[cached since 746.2s ago] {'email_1': 'catalin.admin@gmail.com'}
+ROLLBACK
+BEGIN (implicit)
+UPDATE books SET title=%(title)s, year_published=%(year_published)s, author=%(author)s WHERE books.title = %(title_1)s RETURNING books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock
+[cached since 27.91s ago] {'title': 'title demo', 'year_published': 2022, 'author': 'author updated', 'title_1': 'title demo'}
+COMMIT
+127.0.0.1 - - [16/Oct/2022 16:04:54] "PATCH /admins/books HTTP/1.1" 200 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NTkxOTAwMCwianRpIjoiMDY4OTk1ZTItZjRjMC00OWEzLWJkYjktZDA3ZDgxMWI0MDIxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4uYWRtaW5AZ21haWwuY29tIiwibmJmIjoxNjY1OTE5MDAwLCJleHAiOjE2NjYwMDE4MDB9.Evm_hJgpiduC1Y7TLPVuhZ1qy0HXzjvcj2A0c8d3iBQ
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: bb3402b2-d870-4593-b39d-4e886d2d8e6a
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 51
+
+
+Body:
+b'{\r\n         "title": "title demo"\r\n         \r\n    }'
+BEGIN (implicit)
+SELECT users.user_id, users.email, users.passwd, users.is_admin 
+FROM users 
+WHERE users.email = %(email_1)s
+[cached since 808.1s ago] {'email_1': 'catalin.admin@gmail.com'}
+ROLLBACK
+BEGIN (implicit)
+DELETE FROM books WHERE books.title = %(title_1)s RETURNING books.title, books.year_published, books.author, books.price, books.category_id, books.stock
+[generated in 0.00024s] {'title_1': 'title demo'}
+COMMIT
+127.0.0.1 - - [16/Oct/2022 16:05:55] "DELETE /admins/books HTTP/1.1" 200 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NTkxOTAwMCwianRpIjoiMDY4OTk1ZTItZjRjMC00OWEzLWJkYjktZDA3ZDgxMWI0MDIxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4uYWRtaW5AZ21haWwuY29tIiwibmJmIjoxNjY1OTE5MDAwLCJleHAiOjE2NjYwMDE4MDB9.Evm_hJgpiduC1Y7TLPVuhZ1qy0HXzjvcj2A0c8d3iBQ
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 9a11b416-d99e-48cd-9c43-774ebbdd5c20
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 51
+
+
+Body:
+b'{\r\n         "title": "title demo"\r\n         \r\n    }'
+BEGIN (implicit)
+SELECT users.user_id, users.email, users.passwd, users.is_admin 
+FROM users 
+WHERE users.email = %(email_1)s
+[cached since 825.6s ago] {'email_1': 'catalin.admin@gmail.com'}
+ROLLBACK
+BEGIN (implicit)
+DELETE FROM books WHERE books.title = %(title_1)s RETURNING books.title, books.year_published, books.author, books.price, books.category_id, books.stock
+[cached since 17.5s ago] {'title_1': 'title demo'}
+COMMIT
+127.0.0.1 - - [16/Oct/2022 16:06:13] "[33mDELETE /admins/books HTTP/1.1[0m" 404 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NTkyNDc3NywianRpIjoiY2Q5N2JiYWUtMGQzYi00YTk2LTliYWEtY2NjYjcyZjE0ODdhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4udXNlcnJAZ21haWwuY29tIiwibmJmIjoxNjY1OTI0Nzc3LCJleHAiOjE2NjYwMDc1Nzd9.zVR-3Op3ULPj7ndZyjpNflV9qUaZszrI8KT-ZjjcX-w
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: f6546632-23a6-4d1e-b39d-c9c2e487076e
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+
+
+127.0.0.1 - - [16/Oct/2022 16:06:49] "[32mGET /user-actions?filter=category_name&filter-values=fantasy&order=price HTTP/1.1[0m" 308 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NTkyNDc3NywianRpIjoiY2Q5N2JiYWUtMGQzYi00YTk2LTliYWEtY2NjYjcyZjE0ODdhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4udXNlcnJAZ21haWwuY29tIiwibmJmIjoxNjY1OTI0Nzc3LCJleHAiOjE2NjYwMDc1Nzd9.zVR-3Op3ULPj7ndZyjpNflV9qUaZszrI8KT-ZjjcX-w
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: f6546632-23a6-4d1e-b39d-c9c2e487076e
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.1:5000/user-actions?filter=category_name&filter-values=fantasy&order=price
+Host: 127.0.0.1:5000
+
+
+BEGIN (implicit)
+SELECT books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock 
+FROM books JOIN categories ON categories.category_id = books.category_id 
+WHERE categories.category_name IN (%(category_name_1_1)s) ORDER BY books.price
+[cached since 417.7s ago] {'category_name_1_1': 'fantasy'}
+ROLLBACK
+127.0.0.1 - - [16/Oct/2022 16:06:49] "GET /user-actions/?filter=category_name&filter-values=fantasy&order=price HTTP/1.1" 200 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NTkyNDc3NywianRpIjoiY2Q5N2JiYWUtMGQzYi00YTk2LTliYWEtY2NjYjcyZjE0ODdhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4udXNlcnJAZ21haWwuY29tIiwibmJmIjoxNjY1OTI0Nzc3LCJleHAiOjE2NjYwMDc1Nzd9.zVR-3Op3ULPj7ndZyjpNflV9qUaZszrI8KT-ZjjcX-w
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 4846355e-8da9-418b-bbbe-b4f47498ba04
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+
+
+127.0.0.1 - - [16/Oct/2022 16:08:36] "[32mGET /user-actions?filter=category_name&filter-values=fantasy%20updated&order=price HTTP/1.1[0m" 308 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NTkyNDc3NywianRpIjoiY2Q5N2JiYWUtMGQzYi00YTk2LTliYWEtY2NjYjcyZjE0ODdhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4udXNlcnJAZ21haWwuY29tIiwibmJmIjoxNjY1OTI0Nzc3LCJleHAiOjE2NjYwMDc1Nzd9.zVR-3Op3ULPj7ndZyjpNflV9qUaZszrI8KT-ZjjcX-w
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 4846355e-8da9-418b-bbbe-b4f47498ba04
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.1:5000/user-actions?filter=category_name&filter-values=fantasy%20updated&order=price
+Host: 127.0.0.1:5000
+
+
+BEGIN (implicit)
+SELECT books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock 
+FROM books JOIN categories ON categories.category_id = books.category_id 
+WHERE categories.category_name IN (%(category_name_1_1)s) ORDER BY books.price
+[cached since 524.8s ago] {'category_name_1_1': 'fantasy updated'}
+ROLLBACK
+127.0.0.1 - - [16/Oct/2022 16:08:36] "GET /user-actions/?filter=category_name&filter-values=fantasy%20updated&order=price HTTP/1.1" 200 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NTkyNDc3NywianRpIjoiY2Q5N2JiYWUtMGQzYi00YTk2LTliYWEtY2NjYjcyZjE0ODdhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4udXNlcnJAZ21haWwuY29tIiwibmJmIjoxNjY1OTI0Nzc3LCJleHAiOjE2NjYwMDc1Nzd9.zVR-3Op3ULPj7ndZyjpNflV9qUaZszrI8KT-ZjjcX-w
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: e906126b-7acd-4695-bd1d-afc55ff83629
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+
+
+127.0.0.1 - - [16/Oct/2022 16:09:28] "[32mGET /user-actions?filter=category_name&filter-values=fantasy%20updated&order=price HTTP/1.1[0m" 308 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NTkyNDc3NywianRpIjoiY2Q5N2JiYWUtMGQzYi00YTk2LTliYWEtY2NjYjcyZjE0ODdhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4udXNlcnJAZ21haWwuY29tIiwibmJmIjoxNjY1OTI0Nzc3LCJleHAiOjE2NjYwMDc1Nzd9.zVR-3Op3ULPj7ndZyjpNflV9qUaZszrI8KT-ZjjcX-w
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: e906126b-7acd-4695-bd1d-afc55ff83629
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.1:5000/user-actions?filter=category_name&filter-values=fantasy%20updated&order=price
+Host: 127.0.0.1:5000
+
+
+BEGIN (implicit)
+SELECT books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock 
+FROM books JOIN categories ON categories.category_id = books.category_id 
+WHERE categories.category_name IN (%(category_name_1_1)s) ORDER BY books.price
+[cached since 577.2s ago] {'category_name_1_1': 'fantasy updated'}
+ROLLBACK
+127.0.0.1 - - [16/Oct/2022 16:09:28] "GET /user-actions/?filter=category_name&filter-values=fantasy%20updated&order=price HTTP/1.1" 200 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NTkyNDc3NywianRpIjoiY2Q5N2JiYWUtMGQzYi00YTk2LTliYWEtY2NjYjcyZjE0ODdhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4udXNlcnJAZ21haWwuY29tIiwibmJmIjoxNjY1OTI0Nzc3LCJleHAiOjE2NjYwMDc1Nzd9.zVR-3Op3ULPj7ndZyjpNflV9qUaZszrI8KT-ZjjcX-w
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 66349627-c3a0-497e-9d65-9aa79df7de4f
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 23
+
+
+Body:
+b'{\r\n    "book_id": 13\r\n}'
+127.0.0.1 - - [16/Oct/2022 16:12:26] "[32mPOST /user-actions HTTP/1.1[0m" 308 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NTkyNDc3NywianRpIjoiY2Q5N2JiYWUtMGQzYi00YTk2LTliYWEtY2NjYjcyZjE0ODdhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4udXNlcnJAZ21haWwuY29tIiwibmJmIjoxNjY1OTI0Nzc3LCJleHAiOjE2NjYwMDc1Nzd9.zVR-3Op3ULPj7ndZyjpNflV9qUaZszrI8KT-ZjjcX-w
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 66349627-c3a0-497e-9d65-9aa79df7de4f
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 23
+Referer: http://127.0.0.1:5000/user-actions
+Host: 127.0.0.1:5000
+
+
+Body:
+b'{\r\n    "book_id": 13\r\n}'
+BEGIN (implicit)
+SELECT books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock 
+FROM books 
+WHERE books.book_id IN (%(book_id_1_1)s)
+[generated in 0.00020s] {'book_id_1_1': 13}
+ROLLBACK
+BEGIN (implicit)
+INSERT INTO carts (email, book_id) VALUES (%(email)s, %(book_id)s) RETURNING carts.cart_id, carts.email, carts.book_id
+[no key 0.00013s] {'email': 'catalin.userr@gmail.com', 'book_id': 13}
+COMMIT
+BEGIN (implicit)
+UPDATE books SET stock=%(stock)s WHERE books.book_id = %(book_id_1)s RETURNING books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock
+[generated in 0.00028s] {'stock': 0, 'book_id_1': 13}
+COMMIT
+INSERT INTO apscheduler_jobs (id, next_run_time, job_state) VALUES (%(id)s, %(next_run_time)s, %(job_state)s)
+[generated in 0.00024s] {'id': '69', 'next_run_time': 1665926546.14239, 'job_state': <psycopg2.extensions.Binary object at 0x000001D92E1858C0>}
+COMMIT
+127.0.0.1 - - [16/Oct/2022 16:12:26] "[35m[1mPOST /user-actions/ HTTP/1.1[0m" 201 -
+SELECT apscheduler_jobs.id, apscheduler_jobs.job_state 
+FROM apscheduler_jobs 
+WHERE apscheduler_jobs.next_run_time <= %(next_run_time_1)s ORDER BY apscheduler_jobs.next_run_time
+[cached since 1562s ago] {'next_run_time_1': 1665925946.207253}
+SELECT apscheduler_jobs.next_run_time 
+FROM apscheduler_jobs 
+WHERE apscheduler_jobs.next_run_time IS NOT NULL ORDER BY apscheduler_jobs.next_run_time 
+ LIMIT %(param_1)s
+[cached since 1562s ago] {'param_1': 1}
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NTkyNDc3NywianRpIjoiY2Q5N2JiYWUtMGQzYi00YTk2LTliYWEtY2NjYjcyZjE0ODdhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4udXNlcnJAZ21haWwuY29tIiwibmJmIjoxNjY1OTI0Nzc3LCJleHAiOjE2NjYwMDc1Nzd9.zVR-3Op3ULPj7ndZyjpNflV9qUaZszrI8KT-ZjjcX-w
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 3c4feaec-5b65-43b2-a6f1-790be83a7ca2
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 23
+
+
+Body:
+b'{\r\n    "cart_id": 69\r\n}'
+127.0.0.1 - - [16/Oct/2022 16:13:23] "[32mDELETE /user-actions HTTP/1.1[0m" 308 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NTkyNDc3NywianRpIjoiY2Q5N2JiYWUtMGQzYi00YTk2LTliYWEtY2NjYjcyZjE0ODdhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4udXNlcnJAZ21haWwuY29tIiwibmJmIjoxNjY1OTI0Nzc3LCJleHAiOjE2NjYwMDc1Nzd9.zVR-3Op3ULPj7ndZyjpNflV9qUaZszrI8KT-ZjjcX-w
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 3c4feaec-5b65-43b2-a6f1-790be83a7ca2
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 23
+Referer: http://127.0.0.1:5000/user-actions
+Host: 127.0.0.1:5000
+
+
+Body:
+b'{\r\n    "cart_id": 69\r\n}'
+BEGIN (implicit)
+SELECT carts.cart_id, carts.email, carts.book_id 
+FROM carts 
+WHERE carts.email = %(email_1)s
+[generated in 0.00019s] {'email_1': 'catalin.userr@gmail.com'}
+ROLLBACK
+BEGIN (implicit)
+DELETE FROM carts WHERE carts.cart_id = %(cart_id_1)s RETURNING carts.cart_id, carts.email, carts.book_id
+[generated in 0.00015s] {'cart_id_1': 69}
+COMMIT
+DELETE FROM apscheduler_jobs WHERE apscheduler_jobs.id = %(id_1)s
+[generated in 0.00018s] {'id_1': '69'}
+COMMIT
+BEGIN (implicit)
+SELECT books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock 
+FROM books 
+WHERE books.book_id IN (%(book_id_1_1)s)
+[cached since 57.61s ago] {'book_id_1_1': 13}
+ROLLBACK
+BEGIN (implicit)
+UPDATE books SET stock=%(stock)s WHERE books.book_id = %(book_id_1)s RETURNING books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock
+[cached since 57.61s ago] {'stock': 1, 'book_id_1': 13}
+COMMIT
+127.0.0.1 - - [16/Oct/2022 16:13:23] "DELETE /user-actions/ HTTP/1.1" 200 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NTkyNDc3NywianRpIjoiY2Q5N2JiYWUtMGQzYi00YTk2LTliYWEtY2NjYjcyZjE0ODdhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4udXNlcnJAZ21haWwuY29tIiwibmJmIjoxNjY1OTI0Nzc3LCJleHAiOjE2NjYwMDc1Nzd9.zVR-3Op3ULPj7ndZyjpNflV9qUaZszrI8KT-ZjjcX-w
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 059b7825-653a-4880-bfbd-7602b0481e9e
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 23
+
+
+Body:
+b'{\r\n    "cart_id": 69\r\n}'
+127.0.0.1 - - [16/Oct/2022 16:13:48] "[32mDELETE /user-actions HTTP/1.1[0m" 308 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NTkyNDc3NywianRpIjoiY2Q5N2JiYWUtMGQzYi00YTk2LTliYWEtY2NjYjcyZjE0ODdhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4udXNlcnJAZ21haWwuY29tIiwibmJmIjoxNjY1OTI0Nzc3LCJleHAiOjE2NjYwMDc1Nzd9.zVR-3Op3ULPj7ndZyjpNflV9qUaZszrI8KT-ZjjcX-w
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 059b7825-653a-4880-bfbd-7602b0481e9e
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 23
+Referer: http://127.0.0.1:5000/user-actions
+Host: 127.0.0.1:5000
+
+
+Body:
+b'{\r\n    "cart_id": 69\r\n}'
+BEGIN (implicit)
+SELECT carts.cart_id, carts.email, carts.book_id 
+FROM carts 
+WHERE carts.email = %(email_1)s
+[cached since 24.36s ago] {'email_1': 'catalin.userr@gmail.com'}
+ROLLBACK
+127.0.0.1 - - [16/Oct/2022 16:13:48] "[33mDELETE /user-actions/ HTTP/1.1[0m" 404 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NTkyNDc3NywianRpIjoiY2Q5N2JiYWUtMGQzYi00YTk2LTliYWEtY2NjYjcyZjE0ODdhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4udXNlcnJAZ21haWwuY29tIiwibmJmIjoxNjY1OTI0Nzc3LCJleHAiOjE2NjYwMDc1Nzd9.zVR-3Op3ULPj7ndZyjpNflV9qUaZszrI8KT-ZjjcX-w
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 360fbed4-22d1-4b0e-9eda-1a322f12eb5e
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 22
+
+
+Body:
+b'{\r\n    "book_id": 7\r\n}'
+127.0.0.1 - - [16/Oct/2022 16:15:33] "[32mPOST /user-actions HTTP/1.1[0m" 308 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NTkyNDc3NywianRpIjoiY2Q5N2JiYWUtMGQzYi00YTk2LTliYWEtY2NjYjcyZjE0ODdhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4udXNlcnJAZ21haWwuY29tIiwibmJmIjoxNjY1OTI0Nzc3LCJleHAiOjE2NjYwMDc1Nzd9.zVR-3Op3ULPj7ndZyjpNflV9qUaZszrI8KT-ZjjcX-w
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 360fbed4-22d1-4b0e-9eda-1a322f12eb5e
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 22
+Referer: http://127.0.0.1:5000/user-actions
+Host: 127.0.0.1:5000
+
+
+Body:
+b'{\r\n    "book_id": 7\r\n}'
+BEGIN (implicit)
+SELECT books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock 
+FROM books 
+WHERE books.book_id IN (%(book_id_1_1)s)
+[cached since 187s ago] {'book_id_1_1': 7}
+ROLLBACK
+BEGIN (implicit)
+INSERT INTO carts (email, book_id) VALUES (%(email)s, %(book_id)s) RETURNING carts.cart_id, carts.email, carts.book_id
+[no key 0.00017s] {'email': 'catalin.userr@gmail.com', 'book_id': 7}
+COMMIT
+BEGIN (implicit)
+UPDATE books SET stock=%(stock)s WHERE books.book_id = %(book_id_1)s RETURNING books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock
+[cached since 187s ago] {'stock': 64, 'book_id_1': 7}
+COMMIT
+INSERT INTO apscheduler_jobs (id, next_run_time, job_state) VALUES (%(id)s, %(next_run_time)s, %(job_state)s)
+[cached since 186.9s ago] {'id': '70', 'next_run_time': 1665926733.138459, 'job_state': <psycopg2.extensions.Binary object at 0x000001D92E184D20>}
+COMMIT
+127.0.0.1 - - [16/Oct/2022 16:15:33] "[35m[1mPOST /user-actions/ HTTP/1.1[0m" 201 -
+SELECT apscheduler_jobs.id, apscheduler_jobs.job_state 
+FROM apscheduler_jobs 
+WHERE apscheduler_jobs.next_run_time <= %(next_run_time_1)s ORDER BY apscheduler_jobs.next_run_time
+[cached since 1749s ago] {'next_run_time_1': 1665926133.140459}
+SELECT apscheduler_jobs.next_run_time 
+FROM apscheduler_jobs 
+WHERE apscheduler_jobs.next_run_time IS NOT NULL ORDER BY apscheduler_jobs.next_run_time 
+ LIMIT %(param_1)s
+[cached since 1749s ago] {'param_1': 1}
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NTkyNDc3NywianRpIjoiY2Q5N2JiYWUtMGQzYi00YTk2LTliYWEtY2NjYjcyZjE0ODdhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4udXNlcnJAZ21haWwuY29tIiwibmJmIjoxNjY1OTI0Nzc3LCJleHAiOjE2NjYwMDc1Nzd9.zVR-3Op3ULPj7ndZyjpNflV9qUaZszrI8KT-ZjjcX-w
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 756f7a54-48e3-49c6-8887-7607b0750acf
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 22
+
+
+Body:
+b'{\r\n    "book_id": 7\r\n}'
+127.0.0.1 - - [16/Oct/2022 16:15:34] "[32mPOST /user-actions HTTP/1.1[0m" 308 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NTkyNDc3NywianRpIjoiY2Q5N2JiYWUtMGQzYi00YTk2LTliYWEtY2NjYjcyZjE0ODdhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4udXNlcnJAZ21haWwuY29tIiwibmJmIjoxNjY1OTI0Nzc3LCJleHAiOjE2NjYwMDc1Nzd9.zVR-3Op3ULPj7ndZyjpNflV9qUaZszrI8KT-ZjjcX-w
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 756f7a54-48e3-49c6-8887-7607b0750acf
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 22
+Referer: http://127.0.0.1:5000/user-actions
+Host: 127.0.0.1:5000
+
+
+Body:
+b'{\r\n    "book_id": 7\r\n}'
+BEGIN (implicit)
+SELECT books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock 
+FROM books 
+WHERE books.book_id IN (%(book_id_1_1)s)
+[cached since 188.1s ago] {'book_id_1_1': 7}
+ROLLBACK
+BEGIN (implicit)
+INSERT INTO carts (email, book_id) VALUES (%(email)s, %(book_id)s) RETURNING carts.cart_id, carts.email, carts.book_id
+[no key 0.00014s] {'email': 'catalin.userr@gmail.com', 'book_id': 7}
+COMMIT
+BEGIN (implicit)
+UPDATE books SET stock=%(stock)s WHERE books.book_id = %(book_id_1)s RETURNING books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock
+[cached since 188.1s ago] {'stock': 63, 'book_id_1': 7}
+COMMIT
+INSERT INTO apscheduler_jobs (id, next_run_time, job_state) VALUES (%(id)s, %(next_run_time)s, %(job_state)s)
+[cached since 188.1s ago] {'id': '71', 'next_run_time': 1665926734.274727, 'job_state': <psycopg2.extensions.Binary object at 0x000001D92E1B1F20>}
+COMMIT
+127.0.0.1 - - [16/Oct/2022 16:15:34] "[35m[1mPOST /user-actions/ HTTP/1.1[0m" 201 -
+SELECT apscheduler_jobs.id, apscheduler_jobs.job_state 
+FROM apscheduler_jobs 
+WHERE apscheduler_jobs.next_run_time <= %(next_run_time_1)s ORDER BY apscheduler_jobs.next_run_time
+[cached since 1750s ago] {'next_run_time_1': 1665926134.278419}
+SELECT apscheduler_jobs.next_run_time 
+FROM apscheduler_jobs 
+WHERE apscheduler_jobs.next_run_time IS NOT NULL ORDER BY apscheduler_jobs.next_run_time 
+ LIMIT %(param_1)s
+[cached since 1750s ago] {'param_1': 1}
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NTkyNDc3NywianRpIjoiY2Q5N2JiYWUtMGQzYi00YTk2LTliYWEtY2NjYjcyZjE0ODdhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4udXNlcnJAZ21haWwuY29tIiwibmJmIjoxNjY1OTI0Nzc3LCJleHAiOjE2NjYwMDc1Nzd9.zVR-3Op3ULPj7ndZyjpNflV9qUaZszrI8KT-ZjjcX-w
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 21648895-5a04-432a-ac61-32b2a370c17a
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 23
+
+
+Body:
+b'{\r\n    "book_id": 15\r\n}'
+127.0.0.1 - - [16/Oct/2022 16:15:56] "[32mPOST /user-actions HTTP/1.1[0m" 308 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NTkyNDc3NywianRpIjoiY2Q5N2JiYWUtMGQzYi00YTk2LTliYWEtY2NjYjcyZjE0ODdhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4udXNlcnJAZ21haWwuY29tIiwibmJmIjoxNjY1OTI0Nzc3LCJleHAiOjE2NjYwMDc1Nzd9.zVR-3Op3ULPj7ndZyjpNflV9qUaZszrI8KT-ZjjcX-w
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 21648895-5a04-432a-ac61-32b2a370c17a
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 23
+Referer: http://127.0.0.1:5000/user-actions
+Host: 127.0.0.1:5000
+
+
+Body:
+b'{\r\n    "book_id": 15\r\n}'
+BEGIN (implicit)
+SELECT books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock 
+FROM books 
+WHERE books.book_id IN (%(book_id_1_1)s)
+[cached since 210.6s ago] {'book_id_1_1': 15}
+ROLLBACK
+BEGIN (implicit)
+INSERT INTO carts (email, book_id) VALUES (%(email)s, %(book_id)s) RETURNING carts.cart_id, carts.email, carts.book_id
+[no key 0.00012s] {'email': 'catalin.userr@gmail.com', 'book_id': 15}
+COMMIT
+BEGIN (implicit)
+UPDATE books SET stock=%(stock)s WHERE books.book_id = %(book_id_1)s RETURNING books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock
+[cached since 210.6s ago] {'stock': 20, 'book_id_1': 15}
+COMMIT
+INSERT INTO apscheduler_jobs (id, next_run_time, job_state) VALUES (%(id)s, %(next_run_time)s, %(job_state)s)
+[cached since 210.5s ago] {'id': '72', 'next_run_time': 1665926756.746017, 'job_state': <psycopg2.extensions.Binary object at 0x000001D92E186A30>}
+COMMIT
+127.0.0.1 - - [16/Oct/2022 16:15:56] "[35m[1mPOST /user-actions/ HTTP/1.1[0m" 201 -
+SELECT apscheduler_jobs.id, apscheduler_jobs.job_state 
+FROM apscheduler_jobs 
+WHERE apscheduler_jobs.next_run_time <= %(next_run_time_1)s ORDER BY apscheduler_jobs.next_run_time
+[cached since 1772s ago] {'next_run_time_1': 1665926156.749521}
+SELECT apscheduler_jobs.next_run_time 
+FROM apscheduler_jobs 
+WHERE apscheduler_jobs.next_run_time IS NOT NULL ORDER BY apscheduler_jobs.next_run_time 
+ LIMIT %(param_1)s
+[cached since 1772s ago] {'param_1': 1}
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NTkyNDc3NywianRpIjoiY2Q5N2JiYWUtMGQzYi00YTk2LTliYWEtY2NjYjcyZjE0ODdhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4udXNlcnJAZ21haWwuY29tIiwibmJmIjoxNjY1OTI0Nzc3LCJleHAiOjE2NjYwMDc1Nzd9.zVR-3Op3ULPj7ndZyjpNflV9qUaZszrI8KT-ZjjcX-w
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 3395cb08-890b-4b0c-9b75-e2a3cc3178e6
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+
+
+BEGIN (implicit)
+SELECT books.title, books.price 
+FROM books JOIN carts ON books.book_id = carts.book_id 
+WHERE carts.email = %(email_1)s
+[generated in 0.00027s] {'email_1': 'catalin.userr@gmail.com'}
+ROLLBACK
+127.0.0.1 - - [16/Oct/2022 16:16:42] "GET /user-actions/cart HTTP/1.1" 200 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NTkyNDc3NywianRpIjoiY2Q5N2JiYWUtMGQzYi00YTk2LTliYWEtY2NjYjcyZjE0ODdhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4udXNlcnJAZ21haWwuY29tIiwibmJmIjoxNjY1OTI0Nzc3LCJleHAiOjE2NjYwMDc1Nzd9.zVR-3Op3ULPj7ndZyjpNflV9qUaZszrI8KT-ZjjcX-w
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: a45c520a-e44a-43c6-a967-d31e332da605
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+
+
+BEGIN (implicit)
+DELETE FROM carts WHERE carts.email = %(email_1)s RETURNING carts.cart_id, carts.email, carts.book_id
+[generated in 0.00021s] {'email_1': 'catalin.userr@gmail.com'}
+COMMIT
+DELETE FROM apscheduler_jobs WHERE apscheduler_jobs.id = %(id_1)s
+[cached since 236.9s ago] {'id_1': '70'}
+COMMIT
+DELETE FROM apscheduler_jobs WHERE apscheduler_jobs.id = %(id_1)s
+[cached since 236.9s ago] {'id_1': '71'}
+COMMIT
+DELETE FROM apscheduler_jobs WHERE apscheduler_jobs.id = %(id_1)s
+[cached since 236.9s ago] {'id_1': '72'}
+COMMIT
+127.0.0.1 - - [16/Oct/2022 16:17:20] "DELETE /user-actions/cart HTTP/1.1" 200 -
+Headers:
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 615f919b-0121-4ae0-b2fa-5547e9a6dab7
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+
+
+127.0.0.1 - - [16/Oct/2022 16:18:24] "[32mGET /anonymous?filter=category_name&filter-values=fantasy&order=price HTTP/1.1[0m" 308 -
+Headers:
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 615f919b-0121-4ae0-b2fa-5547e9a6dab7
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.1:5000/anonymous?filter=category_name&filter-values=fantasy&order=price
+Host: 127.0.0.1:5000
+
+
+BEGIN (implicit)
+SELECT books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock 
+FROM books JOIN categories ON categories.category_id = books.category_id 
+WHERE categories.category_name IN (%(category_name_1_1)s) ORDER BY books.price
+[cached since 1112s ago] {'category_name_1_1': 'fantasy'}
+ROLLBACK
+127.0.0.1 - - [16/Oct/2022 16:18:24] "GET /anonymous/?filter=category_name&filter-values=fantasy&order=price HTTP/1.1" 200 -
+Headers:
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 3ef69497-de8d-4a9e-b1c4-0b8991792951
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+
+
+127.0.0.1 - - [16/Oct/2022 16:18:31] "[32mGET /anonymous?filter=category_name&filter-values=fantasy%20updated&order=price HTTP/1.1[0m" 308 -
+Headers:
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 3ef69497-de8d-4a9e-b1c4-0b8991792951
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.1:5000/anonymous?filter=category_name&filter-values=fantasy%20updated&order=price
+Host: 127.0.0.1:5000
+
+
+BEGIN (implicit)
+SELECT books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock 
+FROM books JOIN categories ON categories.category_id = books.category_id 
+WHERE categories.category_name IN (%(category_name_1_1)s) ORDER BY books.price
+[cached since 1120s ago] {'category_name_1_1': 'fantasy updated'}
+ROLLBACK
+127.0.0.1 - - [16/Oct/2022 16:18:31] "GET /anonymous/?filter=category_name&filter-values=fantasy%20updated&order=price HTTP/1.1" 200 -
+Headers:
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 0e3c53a7-6ba8-4451-abdc-9e30f80dbd9f
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+
+
+127.0.0.1 - - [16/Oct/2022 16:19:17] "[32mGET /anonymous?filter=author&filter-values=catalin%20micu%20the%20great&order=price HTTP/1.1[0m" 308 -
+Headers:
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 0e3c53a7-6ba8-4451-abdc-9e30f80dbd9f
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.1:5000/anonymous?filter=author&filter-values=catalin%20micu%20the%20great&order=price
+Host: 127.0.0.1:5000
+
+
+BEGIN (implicit)
+SELECT books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock 
+FROM books 
+WHERE books.author IN (%(author_1_1)s) ORDER BY books.price
+[generated in 0.00019s] {'author_1_1': 'catalin micu the great'}
+ROLLBACK
+127.0.0.1 - - [16/Oct/2022 16:19:17] "GET /anonymous/?filter=author&filter-values=catalin%20micu%20the%20great&order=price HTTP/1.1" 200 -
+Headers:
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 3d254b93-8f81-44a2-8ac8-7e2cd4a2f77c
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+
+
+127.0.0.1 - - [16/Oct/2022 16:19:36] "[32mGET /anonymous?filter=col&filter-values=catalin%20micu%20the%20great&order=price HTTP/1.1[0m" 308 -
+Headers:
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 3d254b93-8f81-44a2-8ac8-7e2cd4a2f77c
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.1:5000/anonymous?filter=col&filter-values=catalin%20micu%20the%20great&order=price
+Host: 127.0.0.1:5000
+
+
+127.0.0.1 - - [16/Oct/2022 16:19:36] "[31m[1mGET /anonymous/?filter=col&filter-values=catalin%20micu%20the%20great&order=price HTTP/1.1[0m" 400 -
+select pg_catalog.version()
+[raw sql] {}
+select current_schema()
+[raw sql] {}
+show standard_conforming_strings
+[raw sql] {}
+BEGIN (implicit)
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+[generated in 0.00019s] {'name': 'apscheduler_jobs'}
+COMMIT
+SELECT apscheduler_jobs.id, apscheduler_jobs.job_state 
+FROM apscheduler_jobs 
+WHERE apscheduler_jobs.next_run_time <= %(next_run_time_1)s ORDER BY apscheduler_jobs.next_run_time
+[generated in 0.00657s] {'next_run_time_1': 1665926545.322775}
+SELECT apscheduler_jobs.next_run_time 
+FROM apscheduler_jobs 
+WHERE apscheduler_jobs.next_run_time IS NOT NULL ORDER BY apscheduler_jobs.next_run_time 
+ LIMIT %(param_1)s
+[generated in 0.00019s] {'param_1': 1}
+ * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NTkyNDc3NywianRpIjoiY2Q5N2JiYWUtMGQzYi00YTk2LTliYWEtY2NjYjcyZjE0ODdhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4udXNlcnJAZ21haWwuY29tIiwibmJmIjoxNjY1OTI0Nzc3LCJleHAiOjE2NjYwMDc1Nzd9.zVR-3Op3ULPj7ndZyjpNflV9qUaZszrI8KT-ZjjcX-w
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 371ef3ed-b9fc-4b0b-b443-ebf0e5508559
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 23
+
+
+Body:
+b'{\r\n    "book_id": 13\r\n}'
+127.0.0.1 - - [16/Oct/2022 16:22:39] "[32mPOST /user-actions HTTP/1.1[0m" 308 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NTkyNDc3NywianRpIjoiY2Q5N2JiYWUtMGQzYi00YTk2LTliYWEtY2NjYjcyZjE0ODdhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4udXNlcnJAZ21haWwuY29tIiwibmJmIjoxNjY1OTI0Nzc3LCJleHAiOjE2NjYwMDc1Nzd9.zVR-3Op3ULPj7ndZyjpNflV9qUaZszrI8KT-ZjjcX-w
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 371ef3ed-b9fc-4b0b-b443-ebf0e5508559
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 23
+Referer: http://127.0.0.1:5000/user-actions
+Host: 127.0.0.1:5000
+
+
+Body:
+b'{\r\n    "book_id": 13\r\n}'
+select pg_catalog.version()
+[raw sql] {}
+select current_schema()
+[raw sql] {}
+show standard_conforming_strings
+[raw sql] {}
+BEGIN (implicit)
+SELECT books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock 
+FROM books 
+WHERE books.book_id IN (%(book_id_1_1)s)
+[generated in 0.00037s] {'book_id_1_1': 13}
+ROLLBACK
+BEGIN (implicit)
+INSERT INTO carts (email, book_id) VALUES (%(email)s, %(book_id)s) RETURNING carts.cart_id, carts.email, carts.book_id
+[no key 0.00013s] {'email': 'catalin.userr@gmail.com', 'book_id': 13}
+COMMIT
+BEGIN (implicit)
+UPDATE books SET stock=%(stock)s WHERE books.book_id = %(book_id_1)s RETURNING books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock
+[generated in 0.00015s] {'stock': 0, 'book_id_1': 13}
+COMMIT
+INSERT INTO apscheduler_jobs (id, next_run_time, job_state) VALUES (%(id)s, %(next_run_time)s, %(job_state)s)
+[generated in 0.00023s] {'id': '73', 'next_run_time': 1665926620.040892, 'job_state': <psycopg2.extensions.Binary object at 0x0000020677C83930>}
+COMMIT
+127.0.0.1 - - [16/Oct/2022 16:22:40] "[35m[1mPOST /user-actions/ HTTP/1.1[0m" 201 -
+SELECT apscheduler_jobs.id, apscheduler_jobs.job_state 
+FROM apscheduler_jobs 
+WHERE apscheduler_jobs.next_run_time <= %(next_run_time_1)s ORDER BY apscheduler_jobs.next_run_time
+[cached since 14.77s ago] {'next_run_time_1': 1665926560.094761}
+SELECT apscheduler_jobs.next_run_time 
+FROM apscheduler_jobs 
+WHERE apscheduler_jobs.next_run_time IS NOT NULL ORDER BY apscheduler_jobs.next_run_time 
+ LIMIT %(param_1)s
+[cached since 14.76s ago] {'param_1': 1}
+SELECT apscheduler_jobs.id, apscheduler_jobs.job_state 
+FROM apscheduler_jobs 
+WHERE apscheduler_jobs.next_run_time <= %(next_run_time_1)s ORDER BY apscheduler_jobs.next_run_time
+[cached since 74.72s ago] {'next_run_time_1': 1665926620.046417}
+DELETE FROM apscheduler_jobs WHERE apscheduler_jobs.id = %(id_1)s
+[generated in 0.00016s] {'id_1': '73'}
+BEGIN (implicit)
+DELETE FROM carts WHERE carts.cart_id = %(cart_id_1)s RETURNING carts.cart_id, carts.email, carts.book_id
+[generated in 0.00017s] {'cart_id_1': 73}
+COMMIT
+COMMIT
+SELECT apscheduler_jobs.next_run_time 
+FROM apscheduler_jobs 
+WHERE apscheduler_jobs.next_run_time IS NOT NULL ORDER BY apscheduler_jobs.next_run_time 
+ LIMIT %(param_1)s
+[cached since 74.72s ago] {'param_1': 1}
+BEGIN (implicit)
+SELECT books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock 
+FROM books 
+WHERE books.book_id IN (%(book_id_1_1)s)
+[cached since 60.03s ago] {'book_id_1_1': 13}
+ROLLBACK
+BEGIN (implicit)
+UPDATE books SET stock=%(stock)s WHERE books.book_id = %(book_id_1)s RETURNING books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock
+[cached since 60.02s ago] {'stock': 1, 'book_id_1': 13}
+COMMIT
+select pg_catalog.version()
+[raw sql] {}
+select current_schema()
+[raw sql] {}
+show standard_conforming_strings
+[raw sql] {}
+BEGIN (implicit)
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+[generated in 0.00011s] {'name': 'apscheduler_jobs'}
+COMMIT
+SELECT apscheduler_jobs.id, apscheduler_jobs.job_state 
+FROM apscheduler_jobs 
+WHERE apscheduler_jobs.next_run_time <= %(next_run_time_1)s ORDER BY apscheduler_jobs.next_run_time
+[generated in 0.00016s] {'next_run_time_1': 1665951831.174884}
+SELECT apscheduler_jobs.next_run_time 
+FROM apscheduler_jobs 
+WHERE apscheduler_jobs.next_run_time IS NOT NULL ORDER BY apscheduler_jobs.next_run_time 
+ LIMIT %(param_1)s
+[generated in 0.00019s] {'param_1': 1}
+ * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+Headers:
+Host: 127.0.0.1:5000
+Connection: keep-alive
+Cache-Control: max-age=0
+Sec-Ch-Ua: "Chromium";v="106", "Microsoft Edge";v="106", "Not;A=Brand";v="99"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.42
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,ro;q=0.8
+
+
+127.0.0.1 - - [16/Oct/2022 23:24:05] "GET / HTTP/1.1" 200 -
+Headers:
+Host: 127.0.0.1:5000
+Connection: keep-alive
+Sec-Ch-Ua: "Chromium";v="106", "Microsoft Edge";v="106", "Not;A=Brand";v="99"
+Sec-Ch-Ua-Mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.42
+Sec-Ch-Ua-Platform: "Windows"
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://127.0.0.1:5000/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,ro;q=0.8
+If-Modified-Since: Mon, 10 Oct 2022 12:44:46 GMT
+
+
+Headers:
+Host: 127.0.0.1:5000
+Connection: keep-alive
+Sec-Ch-Ua: "Chromium";v="106", "Microsoft Edge";v="106", "Not;A=Brand";v="99"
+Sec-Ch-Ua-Mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.42
+Sec-Ch-Ua-Platform: "Windows"
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://127.0.0.1:5000/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,ro;q=0.8
+If-Modified-Since: Mon, 10 Oct 2022 12:44:46 GMT
+
+
+Headers:
+Host: 127.0.0.1:5000
+Connection: keep-alive
+Sec-Ch-Ua: "Chromium";v="106", "Microsoft Edge";v="106", "Not;A=Brand";v="99"
+Sec-Ch-Ua-Mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.42
+Sec-Ch-Ua-Platform: "Windows"
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: script
+Referer: http://127.0.0.1:5000/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,ro;q=0.8
+If-Modified-Since: Mon, 10 Oct 2022 12:44:46 GMT
+
+
+Headers:
+Host: 127.0.0.1:5000
+Connection: keep-alive
+Sec-Ch-Ua: "Chromium";v="106", "Microsoft Edge";v="106", "Not;A=Brand";v="99"
+Sec-Ch-Ua-Mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.42
+Sec-Ch-Ua-Platform: "Windows"
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: script
+Referer: http://127.0.0.1:5000/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,ro;q=0.8
+If-Modified-Since: Mon, 10 Oct 2022 12:44:46 GMT
+
+
+127.0.0.1 - - [16/Oct/2022 23:24:05] "[36mGET /swaggerui/droid-sans.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [16/Oct/2022 23:24:05] "[36mGET /swaggerui/swagger-ui.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [16/Oct/2022 23:24:05] "[36mGET /swaggerui/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [16/Oct/2022 23:24:05] "[36mGET /swaggerui/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+Headers:
+Host: 127.0.0.1:5000
+Connection: keep-alive
+Sec-Ch-Ua: "Chromium";v="106", "Microsoft Edge";v="106", "Not;A=Brand";v="99"
+Accept: application/json,*/*
+Sec-Ch-Ua-Mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.42
+Sec-Ch-Ua-Platform: "Windows"
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://127.0.0.1:5000/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,ro;q=0.8
+
+
+127.0.0.1 - - [16/Oct/2022 23:24:05] "GET /swagger.json HTTP/1.1" 200 -
+Headers:
+Host: 127.0.0.1:5000
+Connection: keep-alive
+Sec-Ch-Ua: "Chromium";v="106", "Microsoft Edge";v="106", "Not;A=Brand";v="99"
+Sec-Ch-Ua-Mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.42
+Sec-Ch-Ua-Platform: "Windows"
+Accept: image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://127.0.0.1:5000/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,ro;q=0.8
+If-Modified-Since: Mon, 10 Oct 2022 12:44:46 GMT
+
+
+127.0.0.1 - - [16/Oct/2022 23:24:05] "[36mGET /swaggerui/favicon-32x32.png HTTP/1.1[0m" 304 -
+Headers:
+Host: 127.0.0.1:5000
+Connection: keep-alive
+Sec-Ch-Ua: "Chromium";v="106", "Microsoft Edge";v="106", "Not;A=Brand";v="99"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.42
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,ro;q=0.8
+
+
+127.0.0.1 - - [16/Oct/2022 23:24:06] "GET /swagger.json HTTP/1.1" 200 -
+Headers:
+Host: 127.0.0.1:5000
+Connection: keep-alive
+Sec-Ch-Ua: "Chromium";v="106", "Microsoft Edge";v="106", "Not;A=Brand";v="99"
+Sec-Ch-Ua-Mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.42
+Sec-Ch-Ua-Platform: "Windows"
+Accept: image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://127.0.0.1:5000/swagger.json
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,ro;q=0.8
+
+
+127.0.0.1 - - [16/Oct/2022 23:24:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+select pg_catalog.version()
+[raw sql] {}
+select current_schema()
+[raw sql] {}
+show standard_conforming_strings
+[raw sql] {}
+BEGIN (implicit)
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+[generated in 0.00027s] {'name': 'apscheduler_jobs'}
+COMMIT
+SELECT apscheduler_jobs.id, apscheduler_jobs.job_state 
+FROM apscheduler_jobs 
+WHERE apscheduler_jobs.next_run_time <= %(next_run_time_1)s ORDER BY apscheduler_jobs.next_run_time
+[generated in 0.00851s] {'next_run_time_1': 1666080858.495825}
+SELECT apscheduler_jobs.next_run_time 
+FROM apscheduler_jobs 
+WHERE apscheduler_jobs.next_run_time IS NOT NULL ORDER BY apscheduler_jobs.next_run_time 
+ LIMIT %(param_1)s
+[generated in 0.00025s] {'param_1': 1}
+ * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+Headers:
+Host: 127.0.0.1:5000
+Connection: keep-alive
+Sec-Ch-Ua: "Chromium";v="106", "Microsoft Edge";v="106", "Not;A=Brand";v="99"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.47
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,ro;q=0.8
+
+
+127.0.0.1 - - [18/Oct/2022 11:14:20] "GET / HTTP/1.1" 200 -
+Headers:
+Host: 127.0.0.1:5000
+Connection: keep-alive
+Sec-Ch-Ua: "Chromium";v="106", "Microsoft Edge";v="106", "Not;A=Brand";v="99"
+Sec-Ch-Ua-Mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.47
+Sec-Ch-Ua-Platform: "Windows"
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://127.0.0.1:5000/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,ro;q=0.8
+If-Modified-Since: Mon, 10 Oct 2022 12:44:46 GMT
+
+
+Headers:
+Host: 127.0.0.1:5000
+Connection: keep-alive
+Sec-Ch-Ua: "Chromium";v="106", "Microsoft Edge";v="106", "Not;A=Brand";v="99"
+Sec-Ch-Ua-Mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.47
+Sec-Ch-Ua-Platform: "Windows"
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: script
+Referer: http://127.0.0.1:5000/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,ro;q=0.8
+If-Modified-Since: Mon, 10 Oct 2022 12:44:46 GMT
+
+
+Headers:
+Host: 127.0.0.1:5000
+Connection: keep-alive
+Sec-Ch-Ua: "Chromium";v="106", "Microsoft Edge";v="106", "Not;A=Brand";v="99"
+Sec-Ch-Ua-Mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.47
+Sec-Ch-Ua-Platform: "Windows"
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: script
+Referer: http://127.0.0.1:5000/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,ro;q=0.8
+If-Modified-Since: Mon, 10 Oct 2022 12:44:46 GMT
+
+
+Headers:
+Host: 127.0.0.1:5000
+Connection: keep-alive
+Sec-Ch-Ua: "Chromium";v="106", "Microsoft Edge";v="106", "Not;A=Brand";v="99"
+Sec-Ch-Ua-Mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.47
+Sec-Ch-Ua-Platform: "Windows"
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://127.0.0.1:5000/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,ro;q=0.8
+If-Modified-Since: Mon, 10 Oct 2022 12:44:46 GMT
+
+
+127.0.0.1 - - [18/Oct/2022 11:14:21] "[36mGET /swaggerui/swagger-ui.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2022 11:14:21] "[36mGET /swaggerui/droid-sans.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2022 11:14:21] "[36mGET /swaggerui/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/Oct/2022 11:14:21] "[36mGET /swaggerui/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+Headers:
+Host: 127.0.0.1:5000
+Connection: keep-alive
+Sec-Ch-Ua: "Chromium";v="106", "Microsoft Edge";v="106", "Not;A=Brand";v="99"
+Accept: application/json,*/*
+Sec-Ch-Ua-Mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.47
+Sec-Ch-Ua-Platform: "Windows"
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://127.0.0.1:5000/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,ro;q=0.8
+
+
+127.0.0.1 - - [18/Oct/2022 11:14:22] "GET /swagger.json HTTP/1.1" 200 -
+Headers:
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: f3617469-d0ec-45cc-8f62-a198e37e92ce
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 57
+
+
+Body:
+b'{"email": "x", "passwd": "Password-12", "is_admin": true}'
+127.0.0.1 - - [18/Oct/2022 11:16:48] "[31m[1mPOST /auth/register HTTP/1.1[0m" 400 -
+Headers:
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 3da3f795-ab7a-4d00-b6d1-7f98161c4e06
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 78
+
+
+Body:
+b'{"email": "x@nonexistingemail.com", "passwd": "Password-12", "is_admin": true}'
+127.0.0.1 - - [18/Oct/2022 11:17:24] "[31m[1mPOST /auth/register HTTP/1.1[0m" 400 -
+Headers:
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 1ab2a78f-9f6d-4b83-923e-f5d67a549934
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 73
+
+
+Body:
+b'{\r\n    "email": "catalin.userr@gmail.com",\r\n    "passwd": "Password12"\r\n}'
+127.0.0.1 - - [18/Oct/2022 11:19:12] "[31m[1mPOST /auth/login HTTP/1.1[0m" 400 -
+Headers:
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 475ae851-3f88-4a6a-ab2d-89c238974057
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 74
+
+
+Body:
+b'{\r\n    "email": "catalin.userr@gmail.com",\r\n    "passwd": "Password-12"\r\n}'
+select pg_catalog.version()
+[raw sql] {}
+select current_schema()
+[raw sql] {}
+show standard_conforming_strings
+[raw sql] {}
+BEGIN (implicit)
+SELECT users.user_id, users.email, users.passwd, users.is_admin 
+FROM users 
+WHERE users.email = %(email_1)s
+[generated in 0.00013s] {'email_1': 'catalin.userr@gmail.com'}
+ROLLBACK
+127.0.0.1 - - [18/Oct/2022 11:19:22] "POST /auth/login HTTP/1.1" 200 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NjA4MTE2MiwianRpIjoiMTlkNDY1MTMtMDdkOS00YzMzLTk2YjgtMTBmMmRiY2EzZjI0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4udXNlcnJAZ21haWwuY29tIiwibmJmIjoxNjY2MDgxMTYyLCJleHAiOjE2NjYwODQ3NjJ9.SqP3olFA3smSv6LD_VlDVenkExqucobepyNOQwNEDfM
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 7282fb90-8983-4459-a3bd-161bfbdaf455
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+
+
+BEGIN (implicit)
+SELECT users.user_id, users.email, users.passwd, users.is_admin 
+FROM users 
+WHERE users.email = %(email_1)s
+[cached since 317.3s ago] {'email_1': 'catalin.userr@gmail.com'}
+ROLLBACK
+127.0.0.1 - - [18/Oct/2022 11:24:39] "[31m[1mGET /admins/categories HTTP/1.1[0m" 403 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NjA4MTE2MiwianRpIjoiMTlkNDY1MTMtMDdkOS00YzMzLTk2YjgtMTBmMmRiY2EzZjI0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4udXNlcnJAZ21haWwuY29tIiwibmJmIjoxNjY2MDgxMTYyLCJleHAiOjE2NjYwODQ3NjJ9.SqP3olFA3smSv6LD_VlDVenkExqucobepyNOQwNEDfM
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: aef07d64-89ae-4826-bea7-ee9be6464203
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+
+
+127.0.0.1 - - [18/Oct/2022 11:25:28] "[32mGET /user-actions?filter=category_name&filter-values=fantasy&order=price HTTP/1.1[0m" 308 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NjA4MTE2MiwianRpIjoiMTlkNDY1MTMtMDdkOS00YzMzLTk2YjgtMTBmMmRiY2EzZjI0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4udXNlcnJAZ21haWwuY29tIiwibmJmIjoxNjY2MDgxMTYyLCJleHAiOjE2NjYwODQ3NjJ9.SqP3olFA3smSv6LD_VlDVenkExqucobepyNOQwNEDfM
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: aef07d64-89ae-4826-bea7-ee9be6464203
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.1:5000/user-actions?filter=category_name&filter-values=fantasy&order=price
+Host: 127.0.0.1:5000
+
+
+BEGIN (implicit)
+SELECT books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock 
+FROM books JOIN categories ON categories.category_id = books.category_id 
+WHERE categories.category_name IN (%(category_name_1_1)s) ORDER BY books.price
+[generated in 0.00063s] {'category_name_1_1': 'fantasy'}
+ROLLBACK
+127.0.0.1 - - [18/Oct/2022 11:25:28] "GET /user-actions/?filter=category_name&filter-values=fantasy&order=price HTTP/1.1" 200 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NjA4MTE2MiwianRpIjoiMTlkNDY1MTMtMDdkOS00YzMzLTk2YjgtMTBmMmRiY2EzZjI0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4udXNlcnJAZ21haWwuY29tIiwibmJmIjoxNjY2MDgxMTYyLCJleHAiOjE2NjYwODQ3NjJ9.SqP3olFA3smSv6LD_VlDVenkExqucobepyNOQwNEDfM
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: bc317b6e-b104-4d8f-bea7-760772c79fa6
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+
+
+127.0.0.1 - - [18/Oct/2022 11:26:48] "[32mGET /user-actions?filter=category_name&filter-values=fantasy%20updated&order=price HTTP/1.1[0m" 308 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NjA4MTE2MiwianRpIjoiMTlkNDY1MTMtMDdkOS00YzMzLTk2YjgtMTBmMmRiY2EzZjI0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4udXNlcnJAZ21haWwuY29tIiwibmJmIjoxNjY2MDgxMTYyLCJleHAiOjE2NjYwODQ3NjJ9.SqP3olFA3smSv6LD_VlDVenkExqucobepyNOQwNEDfM
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: bc317b6e-b104-4d8f-bea7-760772c79fa6
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.1:5000/user-actions?filter=category_name&filter-values=fantasy%20updated&order=price
+Host: 127.0.0.1:5000
+
+
+BEGIN (implicit)
+SELECT books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock 
+FROM books JOIN categories ON categories.category_id = books.category_id 
+WHERE categories.category_name IN (%(category_name_1_1)s) ORDER BY books.price
+[cached since 79.74s ago] {'category_name_1_1': 'fantasy updated'}
+ROLLBACK
+127.0.0.1 - - [18/Oct/2022 11:26:48] "GET /user-actions/?filter=category_name&filter-values=fantasy%20updated&order=price HTTP/1.1" 200 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NjA4MTE2MiwianRpIjoiMTlkNDY1MTMtMDdkOS00YzMzLTk2YjgtMTBmMmRiY2EzZjI0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4udXNlcnJAZ21haWwuY29tIiwibmJmIjoxNjY2MDgxMTYyLCJleHAiOjE2NjYwODQ3NjJ9.SqP3olFA3smSv6LD_VlDVenkExqucobepyNOQwNEDfM
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 0f660d39-8aa4-4053-9d9c-871281853511
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 23
+
+
+Body:
+b'{\r\n    "book_id": 13\r\n}'
+127.0.0.1 - - [18/Oct/2022 11:30:31] "[32mPOST /user-actions HTTP/1.1[0m" 308 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NjA4MTE2MiwianRpIjoiMTlkNDY1MTMtMDdkOS00YzMzLTk2YjgtMTBmMmRiY2EzZjI0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4udXNlcnJAZ21haWwuY29tIiwibmJmIjoxNjY2MDgxMTYyLCJleHAiOjE2NjYwODQ3NjJ9.SqP3olFA3smSv6LD_VlDVenkExqucobepyNOQwNEDfM
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 0f660d39-8aa4-4053-9d9c-871281853511
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 23
+Referer: http://127.0.0.1:5000/user-actions
+Host: 127.0.0.1:5000
+
+
+Body:
+b'{\r\n    "book_id": 13\r\n}'
+BEGIN (implicit)
+SELECT books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock 
+FROM books 
+WHERE books.book_id IN (%(book_id_1_1)s)
+[generated in 0.00040s] {'book_id_1_1': 13}
+ROLLBACK
+BEGIN (implicit)
+INSERT INTO carts (email, book_id) VALUES (%(email)s, %(book_id)s) RETURNING carts.cart_id, carts.email, carts.book_id
+[no key 0.00027s] {'email': 'catalin.userr@gmail.com', 'book_id': 13}
+COMMIT
+BEGIN (implicit)
+UPDATE books SET stock=%(stock)s WHERE books.book_id = %(book_id_1)s RETURNING books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock
+[generated in 0.00021s] {'stock': 0, 'book_id_1': 13}
+COMMIT
+INSERT INTO apscheduler_jobs (id, next_run_time, job_state) VALUES (%(id)s, %(next_run_time)s, %(job_state)s)
+[generated in 0.00036s] {'id': '74', 'next_run_time': 1666083631.527267, 'job_state': <psycopg2.extensions.Binary object at 0x0000022DFEDF1C80>}
+COMMIT
+127.0.0.1 - - [18/Oct/2022 11:30:31] "[35m[1mPOST /user-actions/ HTTP/1.1[0m" 201 -
+SELECT apscheduler_jobs.id, apscheduler_jobs.job_state 
+FROM apscheduler_jobs 
+WHERE apscheduler_jobs.next_run_time <= %(next_run_time_1)s ORDER BY apscheduler_jobs.next_run_time
+[cached since 973.1s ago] {'next_run_time_1': 1666081831.602558}
+SELECT apscheduler_jobs.next_run_time 
+FROM apscheduler_jobs 
+WHERE apscheduler_jobs.next_run_time IS NOT NULL ORDER BY apscheduler_jobs.next_run_time 
+ LIMIT %(param_1)s
+[cached since 973.1s ago] {'param_1': 1}
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NjA4MTE2MiwianRpIjoiMTlkNDY1MTMtMDdkOS00YzMzLTk2YjgtMTBmMmRiY2EzZjI0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4udXNlcnJAZ21haWwuY29tIiwibmJmIjoxNjY2MDgxMTYyLCJleHAiOjE2NjYwODQ3NjJ9.SqP3olFA3smSv6LD_VlDVenkExqucobepyNOQwNEDfM
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 5f09ab23-2362-4070-9a2a-2e15c2d17876
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+
+
+127.0.0.1 - - [18/Oct/2022 11:31:08] "[32mGET /user-actions HTTP/1.1[0m" 308 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NjA4MTE2MiwianRpIjoiMTlkNDY1MTMtMDdkOS00YzMzLTk2YjgtMTBmMmRiY2EzZjI0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4udXNlcnJAZ21haWwuY29tIiwibmJmIjoxNjY2MDgxMTYyLCJleHAiOjE2NjYwODQ3NjJ9.SqP3olFA3smSv6LD_VlDVenkExqucobepyNOQwNEDfM
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 5f09ab23-2362-4070-9a2a-2e15c2d17876
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Referer: http://127.0.0.1:5000/user-actions
+Host: 127.0.0.1:5000
+
+
+BEGIN (implicit)
+SELECT books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock 
+FROM books
+[generated in 0.00013s] {}
+ROLLBACK
+127.0.0.1 - - [18/Oct/2022 11:31:08] "GET /user-actions/ HTTP/1.1" 200 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NjA4MTE2MiwianRpIjoiMTlkNDY1MTMtMDdkOS00YzMzLTk2YjgtMTBmMmRiY2EzZjI0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4udXNlcnJAZ21haWwuY29tIiwibmJmIjoxNjY2MDgxMTYyLCJleHAiOjE2NjYwODQ3NjJ9.SqP3olFA3smSv6LD_VlDVenkExqucobepyNOQwNEDfM
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 4a670610-b1d0-46cf-8fc5-e58d2952c8e6
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 23
+
+
+Body:
+b'{\r\n    "cart_id": 74\r\n}'
+127.0.0.1 - - [18/Oct/2022 11:32:24] "[32mDELETE /user-actions HTTP/1.1[0m" 308 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NjA4MTE2MiwianRpIjoiMTlkNDY1MTMtMDdkOS00YzMzLTk2YjgtMTBmMmRiY2EzZjI0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4udXNlcnJAZ21haWwuY29tIiwibmJmIjoxNjY2MDgxMTYyLCJleHAiOjE2NjYwODQ3NjJ9.SqP3olFA3smSv6LD_VlDVenkExqucobepyNOQwNEDfM
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 4a670610-b1d0-46cf-8fc5-e58d2952c8e6
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 23
+Referer: http://127.0.0.1:5000/user-actions
+Host: 127.0.0.1:5000
+
+
+Body:
+b'{\r\n    "cart_id": 74\r\n}'
+BEGIN (implicit)
+SELECT carts.cart_id, carts.email, carts.book_id 
+FROM carts 
+WHERE carts.email = %(email_1)s
+[generated in 0.00025s] {'email_1': 'catalin.userr@gmail.com'}
+ROLLBACK
+BEGIN (implicit)
+DELETE FROM carts WHERE carts.cart_id = %(cart_id_1)s RETURNING carts.cart_id, carts.email, carts.book_id
+[generated in 0.00019s] {'cart_id_1': 74}
+COMMIT
+DELETE FROM apscheduler_jobs WHERE apscheduler_jobs.id = %(id_1)s
+[generated in 0.00016s] {'id_1': '74'}
+COMMIT
+BEGIN (implicit)
+SELECT books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock 
+FROM books 
+WHERE books.book_id IN (%(book_id_1_1)s)
+[cached since 112.9s ago] {'book_id_1_1': 13}
+ROLLBACK
+BEGIN (implicit)
+UPDATE books SET stock=%(stock)s WHERE books.book_id = %(book_id_1)s RETURNING books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock
+[cached since 112.9s ago] {'stock': 1, 'book_id_1': 13}
+COMMIT
+127.0.0.1 - - [18/Oct/2022 11:32:24] "DELETE /user-actions/ HTTP/1.1" 200 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NjA4MTE2MiwianRpIjoiMTlkNDY1MTMtMDdkOS00YzMzLTk2YjgtMTBmMmRiY2EzZjI0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4udXNlcnJAZ21haWwuY29tIiwibmJmIjoxNjY2MDgxMTYyLCJleHAiOjE2NjYwODQ3NjJ9.SqP3olFA3smSv6LD_VlDVenkExqucobepyNOQwNEDfM
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 0035aa57-b0f7-4e90-bf9d-477afdbd03a3
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 23
+
+
+Body:
+b'{\r\n    "book_id": 13\r\n}'
+127.0.0.1 - - [18/Oct/2022 11:34:50] "[32mPOST /user-actions HTTP/1.1[0m" 308 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NjA4MTE2MiwianRpIjoiMTlkNDY1MTMtMDdkOS00YzMzLTk2YjgtMTBmMmRiY2EzZjI0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4udXNlcnJAZ21haWwuY29tIiwibmJmIjoxNjY2MDgxMTYyLCJleHAiOjE2NjYwODQ3NjJ9.SqP3olFA3smSv6LD_VlDVenkExqucobepyNOQwNEDfM
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 0035aa57-b0f7-4e90-bf9d-477afdbd03a3
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 23
+Referer: http://127.0.0.1:5000/user-actions
+Host: 127.0.0.1:5000
+
+
+Body:
+b'{\r\n    "book_id": 13\r\n}'
+BEGIN (implicit)
+SELECT books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock 
+FROM books 
+WHERE books.book_id IN (%(book_id_1_1)s)
+[cached since 259.2s ago] {'book_id_1_1': 13}
+ROLLBACK
+BEGIN (implicit)
+INSERT INTO carts (email, book_id) VALUES (%(email)s, %(book_id)s) RETURNING carts.cart_id, carts.email, carts.book_id
+[no key 0.00013s] {'email': 'catalin.userr@gmail.com', 'book_id': 13}
+COMMIT
+BEGIN (implicit)
+UPDATE books SET stock=%(stock)s WHERE books.book_id = %(book_id_1)s RETURNING books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock
+[cached since 259.2s ago] {'stock': 0, 'book_id_1': 13}
+COMMIT
+INSERT INTO apscheduler_jobs (id, next_run_time, job_state) VALUES (%(id)s, %(next_run_time)s, %(job_state)s)
+[cached since 259.1s ago] {'id': '75', 'next_run_time': 1666083890.680304, 'job_state': <psycopg2.extensions.Binary object at 0x0000022DFEE06220>}
+COMMIT
+127.0.0.1 - - [18/Oct/2022 11:34:50] "[35m[1mPOST /user-actions/ HTTP/1.1[0m" 201 -
+SELECT apscheduler_jobs.id, apscheduler_jobs.job_state 
+FROM apscheduler_jobs 
+WHERE apscheduler_jobs.next_run_time <= %(next_run_time_1)s ORDER BY apscheduler_jobs.next_run_time
+[cached since 1232s ago] {'next_run_time_1': 1666082090.68332}
+SELECT apscheduler_jobs.next_run_time 
+FROM apscheduler_jobs 
+WHERE apscheduler_jobs.next_run_time IS NOT NULL ORDER BY apscheduler_jobs.next_run_time 
+ LIMIT %(param_1)s
+[cached since 1232s ago] {'param_1': 1}
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NjA4MTE2MiwianRpIjoiMTlkNDY1MTMtMDdkOS00YzMzLTk2YjgtMTBmMmRiY2EzZjI0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4udXNlcnJAZ21haWwuY29tIiwibmJmIjoxNjY2MDgxMTYyLCJleHAiOjE2NjYwODQ3NjJ9.SqP3olFA3smSv6LD_VlDVenkExqucobepyNOQwNEDfM
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: c8207ca5-0fce-4b75-ae3a-351dfe3fb466
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 22
+
+
+Body:
+b'{\r\n    "book_id": 7\r\n}'
+127.0.0.1 - - [18/Oct/2022 11:34:55] "[32mPOST /user-actions HTTP/1.1[0m" 308 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NjA4MTE2MiwianRpIjoiMTlkNDY1MTMtMDdkOS00YzMzLTk2YjgtMTBmMmRiY2EzZjI0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4udXNlcnJAZ21haWwuY29tIiwibmJmIjoxNjY2MDgxMTYyLCJleHAiOjE2NjYwODQ3NjJ9.SqP3olFA3smSv6LD_VlDVenkExqucobepyNOQwNEDfM
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: c8207ca5-0fce-4b75-ae3a-351dfe3fb466
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 22
+Referer: http://127.0.0.1:5000/user-actions
+Host: 127.0.0.1:5000
+
+
+Body:
+b'{\r\n    "book_id": 7\r\n}'
+BEGIN (implicit)
+SELECT books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock 
+FROM books 
+WHERE books.book_id IN (%(book_id_1_1)s)
+[cached since 263.8s ago] {'book_id_1_1': 7}
+ROLLBACK
+BEGIN (implicit)
+INSERT INTO carts (email, book_id) VALUES (%(email)s, %(book_id)s) RETURNING carts.cart_id, carts.email, carts.book_id
+[no key 0.00016s] {'email': 'catalin.userr@gmail.com', 'book_id': 7}
+COMMIT
+BEGIN (implicit)
+UPDATE books SET stock=%(stock)s WHERE books.book_id = %(book_id_1)s RETURNING books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock
+[cached since 263.8s ago] {'stock': 62, 'book_id_1': 7}
+COMMIT
+INSERT INTO apscheduler_jobs (id, next_run_time, job_state) VALUES (%(id)s, %(next_run_time)s, %(job_state)s)
+[cached since 263.7s ago] {'id': '76', 'next_run_time': 1666083895.318728, 'job_state': <psycopg2.extensions.Binary object at 0x0000022DFEE2CE70>}
+COMMIT
+127.0.0.1 - - [18/Oct/2022 11:34:55] "[35m[1mPOST /user-actions/ HTTP/1.1[0m" 201 -
+SELECT apscheduler_jobs.id, apscheduler_jobs.job_state 
+FROM apscheduler_jobs 
+WHERE apscheduler_jobs.next_run_time <= %(next_run_time_1)s ORDER BY apscheduler_jobs.next_run_time
+[cached since 1237s ago] {'next_run_time_1': 1666082095.323126}
+SELECT apscheduler_jobs.next_run_time 
+FROM apscheduler_jobs 
+WHERE apscheduler_jobs.next_run_time IS NOT NULL ORDER BY apscheduler_jobs.next_run_time 
+ LIMIT %(param_1)s
+[cached since 1237s ago] {'param_1': 1}
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NjA4MTE2MiwianRpIjoiMTlkNDY1MTMtMDdkOS00YzMzLTk2YjgtMTBmMmRiY2EzZjI0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4udXNlcnJAZ21haWwuY29tIiwibmJmIjoxNjY2MDgxMTYyLCJleHAiOjE2NjYwODQ3NjJ9.SqP3olFA3smSv6LD_VlDVenkExqucobepyNOQwNEDfM
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: a04f78bd-cd9c-4d78-b832-351336c41bbe
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 23
+
+
+Body:
+b'{\r\n    "book_id": 13\r\n}'
+127.0.0.1 - - [18/Oct/2022 11:34:59] "[32mPOST /user-actions HTTP/1.1[0m" 308 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NjA4MTE2MiwianRpIjoiMTlkNDY1MTMtMDdkOS00YzMzLTk2YjgtMTBmMmRiY2EzZjI0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4udXNlcnJAZ21haWwuY29tIiwibmJmIjoxNjY2MDgxMTYyLCJleHAiOjE2NjYwODQ3NjJ9.SqP3olFA3smSv6LD_VlDVenkExqucobepyNOQwNEDfM
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: a04f78bd-cd9c-4d78-b832-351336c41bbe
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 23
+Referer: http://127.0.0.1:5000/user-actions
+Host: 127.0.0.1:5000
+
+
+Body:
+b'{\r\n    "book_id": 13\r\n}'
+BEGIN (implicit)
+SELECT books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock 
+FROM books 
+WHERE books.book_id IN (%(book_id_1_1)s)
+[cached since 268.2s ago] {'book_id_1_1': 13}
+ROLLBACK
+127.0.0.1 - - [18/Oct/2022 11:34:59] "[31m[1mPOST /user-actions/ HTTP/1.1[0m" 403 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NjA4MTE2MiwianRpIjoiMTlkNDY1MTMtMDdkOS00YzMzLTk2YjgtMTBmMmRiY2EzZjI0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4udXNlcnJAZ21haWwuY29tIiwibmJmIjoxNjY2MDgxMTYyLCJleHAiOjE2NjYwODQ3NjJ9.SqP3olFA3smSv6LD_VlDVenkExqucobepyNOQwNEDfM
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: c7f7cfce-e4b8-428e-b802-91991a38486e
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 23
+
+
+Body:
+b'{\r\n    "book_id": 15\r\n}'
+127.0.0.1 - - [18/Oct/2022 11:35:15] "[32mPOST /user-actions HTTP/1.1[0m" 308 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NjA4MTE2MiwianRpIjoiMTlkNDY1MTMtMDdkOS00YzMzLTk2YjgtMTBmMmRiY2EzZjI0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4udXNlcnJAZ21haWwuY29tIiwibmJmIjoxNjY2MDgxMTYyLCJleHAiOjE2NjYwODQ3NjJ9.SqP3olFA3smSv6LD_VlDVenkExqucobepyNOQwNEDfM
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: c7f7cfce-e4b8-428e-b802-91991a38486e
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 23
+Referer: http://127.0.0.1:5000/user-actions
+Host: 127.0.0.1:5000
+
+
+Body:
+b'{\r\n    "book_id": 15\r\n}'
+BEGIN (implicit)
+SELECT books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock 
+FROM books 
+WHERE books.book_id IN (%(book_id_1_1)s)
+[cached since 283.7s ago] {'book_id_1_1': 15}
+ROLLBACK
+BEGIN (implicit)
+INSERT INTO carts (email, book_id) VALUES (%(email)s, %(book_id)s) RETURNING carts.cart_id, carts.email, carts.book_id
+[no key 0.00014s] {'email': 'catalin.userr@gmail.com', 'book_id': 15}
+COMMIT
+BEGIN (implicit)
+UPDATE books SET stock=%(stock)s WHERE books.book_id = %(book_id_1)s RETURNING books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock
+[cached since 283.6s ago] {'stock': 19, 'book_id_1': 15}
+COMMIT
+INSERT INTO apscheduler_jobs (id, next_run_time, job_state) VALUES (%(id)s, %(next_run_time)s, %(job_state)s)
+[cached since 283.6s ago] {'id': '77', 'next_run_time': 1666083915.166728, 'job_state': <psycopg2.extensions.Binary object at 0x0000022DFEDF06F0>}
+COMMIT
+127.0.0.1 - - [18/Oct/2022 11:35:15] "[35m[1mPOST /user-actions/ HTTP/1.1[0m" 201 -
+SELECT apscheduler_jobs.id, apscheduler_jobs.job_state 
+FROM apscheduler_jobs 
+WHERE apscheduler_jobs.next_run_time <= %(next_run_time_1)s ORDER BY apscheduler_jobs.next_run_time
+[cached since 1257s ago] {'next_run_time_1': 1666082115.169679}
+SELECT apscheduler_jobs.next_run_time 
+FROM apscheduler_jobs 
+WHERE apscheduler_jobs.next_run_time IS NOT NULL ORDER BY apscheduler_jobs.next_run_time 
+ LIMIT %(param_1)s
+[cached since 1257s ago] {'param_1': 1}
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NjA4MTE2MiwianRpIjoiMTlkNDY1MTMtMDdkOS00YzMzLTk2YjgtMTBmMmRiY2EzZjI0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4udXNlcnJAZ21haWwuY29tIiwibmJmIjoxNjY2MDgxMTYyLCJleHAiOjE2NjYwODQ3NjJ9.SqP3olFA3smSv6LD_VlDVenkExqucobepyNOQwNEDfM
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: f881eea9-fdfe-44fb-ba36-5ef8b6bc938a
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+
+
+BEGIN (implicit)
+SELECT books.title, books.price 
+FROM books JOIN carts ON books.book_id = carts.book_id 
+WHERE carts.email = %(email_1)s
+[generated in 0.00033s] {'email_1': 'catalin.userr@gmail.com'}
+ROLLBACK
+127.0.0.1 - - [18/Oct/2022 11:35:25] "GET /user-actions/cart HTTP/1.1" 200 -
+Headers:
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 3faa9005-6172-4097-a840-be27363fff85
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 79
+
+
+Body:
+b'{\r\n    "email": "catalinnnnnn.userr@gmail.com",\r\n    "passwd": "Password-12"\r\n}'
+BEGIN (implicit)
+SELECT users.user_id, users.email, users.passwd, users.is_admin 
+FROM users 
+WHERE users.email = %(email_1)s
+[cached since 1295s ago] {'email_1': 'catalinnnnnn.userr@gmail.com'}
+ROLLBACK
+127.0.0.1 - - [18/Oct/2022 11:40:57] "[33mPOST /auth/login HTTP/1.1[0m" 404 -
+select pg_catalog.version()
+[raw sql] {}
+select current_schema()
+[raw sql] {}
+show standard_conforming_strings
+[raw sql] {}
+BEGIN (implicit)
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+[generated in 0.00014s] {'name': 'apscheduler_jobs'}
+COMMIT
+SELECT apscheduler_jobs.id, apscheduler_jobs.job_state 
+FROM apscheduler_jobs 
+WHERE apscheduler_jobs.next_run_time <= %(next_run_time_1)s ORDER BY apscheduler_jobs.next_run_time
+[generated in 0.00685s] {'next_run_time_1': 1666082607.095587}
+SELECT apscheduler_jobs.next_run_time 
+FROM apscheduler_jobs 
+WHERE apscheduler_jobs.next_run_time IS NOT NULL ORDER BY apscheduler_jobs.next_run_time 
+ LIMIT %(param_1)s
+[generated in 0.00021s] {'param_1': 1}
+ * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+Headers:
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 52bb0983-50e9-471d-b61e-a814dad5d878
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 79
+
+
+Body:
+b'{\r\n    "email": "catalinnnnnn.userr@gmail.com",\r\n    "passwd": "Password-12"\r\n}'
+select pg_catalog.version()
+[raw sql] {}
+select current_schema()
+[raw sql] {}
+show standard_conforming_strings
+[raw sql] {}
+BEGIN (implicit)
+SELECT users.user_id, users.email, users.passwd, users.is_admin 
+FROM users 
+WHERE users.email = %(email_1)s
+[generated in 0.00011s] {'email_1': 'catalinnnnnn.userr@gmail.com'}
+ROLLBACK
+127.0.0.1 - - [18/Oct/2022 11:43:30] "[33mPOST /auth/login HTTP/1.1[0m" 404 -
+Headers:
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 2c7bcdea-2ca2-495d-b2bb-17128b29a5cc
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 74
+
+
+Body:
+b'{\r\n    "email": "catalin.userr@gmail.com",\r\n    "passwd": "Password-12"\r\n}'
+BEGIN (implicit)
+SELECT users.user_id, users.email, users.passwd, users.is_admin 
+FROM users 
+WHERE users.email = %(email_1)s
+[cached since 106.4s ago] {'email_1': 'catalin.userr@gmail.com'}
+ROLLBACK
+127.0.0.1 - - [18/Oct/2022 11:45:17] "POST /auth/login HTTP/1.1" 200 -
+Headers:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NjA4MjcxNywianRpIjoiOWQ4MmI0MmItZjk5MS00YWE5LTllNjYtOGFkMGMwZjhlN2NlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhdGFsaW4udXNlcnJAZ21haWwuY29tIiwibmJmIjoxNjY2MDgyNzE3LCJleHAiOjE2NjYwODYzMTd9.X1lQ9cHg0Urp6xFAfBXpfIDJJGDucrLY9n1GDeAiDN0
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: e7d5fa0d-258b-48a9-8265-08658a8d7f87
+Host: 127.0.0.1:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 44
+
+
+Body:
+b'{\r\n    "category_name": "fantasy updated"\r\n}'
+BEGIN (implicit)
+SELECT users.user_id, users.email, users.passwd, users.is_admin 
+FROM users 
+WHERE users.email = %(email_1)s
+[cached since 177.8s ago] {'email_1': 'catalin.userr@gmail.com'}
+ROLLBACK
+BEGIN (implicit)
+DELETE FROM categories WHERE categories.category_name = %(category_name_1)s RETURNING categories.category_id, categories.category_name
+[generated in 0.00021s] {'category_name_1': 'fantasy updated'}
+ROLLBACK
+127.0.0.1 - - [18/Oct/2022 11:46:28] "[31m[1mDELETE /admins/categories HTTP/1.1[0m" 409 -
+SELECT apscheduler_jobs.id, apscheduler_jobs.job_state 
+FROM apscheduler_jobs 
+WHERE apscheduler_jobs.next_run_time <= %(next_run_time_1)s ORDER BY apscheduler_jobs.next_run_time
+[cached since 1284s ago] {'next_run_time_1': 1666083890.700027}
+DELETE FROM apscheduler_jobs WHERE apscheduler_jobs.id = %(id_1)s
+[generated in 0.00019s] {'id_1': '75'}
+BEGIN (implicit)
+DELETE FROM carts WHERE carts.cart_id = %(cart_id_1)s RETURNING carts.cart_id, carts.email, carts.book_id
+[generated in 0.00014s] {'cart_id_1': 75}
+COMMIT
+COMMIT
+SELECT apscheduler_jobs.next_run_time 
+FROM apscheduler_jobs 
+WHERE apscheduler_jobs.next_run_time IS NOT NULL ORDER BY apscheduler_jobs.next_run_time 
+ LIMIT %(param_1)s
+[cached since 1284s ago] {'param_1': 1}
+BEGIN (implicit)
+SELECT books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock 
+FROM books 
+WHERE books.book_id IN (%(book_id_1_1)s)
+[generated in 0.00049s] {'book_id_1_1': 13}
+ROLLBACK
+BEGIN (implicit)
+UPDATE books SET stock=%(stock)s WHERE books.book_id = %(book_id_1)s RETURNING books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock
+[generated in 0.00013s] {'stock': 1, 'book_id_1': 13}
+COMMIT
+SELECT apscheduler_jobs.id, apscheduler_jobs.job_state 
+FROM apscheduler_jobs 
+WHERE apscheduler_jobs.next_run_time <= %(next_run_time_1)s ORDER BY apscheduler_jobs.next_run_time
+[cached since 1288s ago] {'next_run_time_1': 1666083895.34167}
+DELETE FROM apscheduler_jobs WHERE apscheduler_jobs.id = %(id_1)s
+[cached since 4.638s ago] {'id_1': '76'}
+BEGIN (implicit)
+DELETE FROM carts WHERE carts.cart_id = %(cart_id_1)s RETURNING carts.cart_id, carts.email, carts.book_id
+COMMIT
+[cached since 4.638s ago] {'cart_id_1': 76}
+COMMIT
+SELECT apscheduler_jobs.next_run_time 
+FROM apscheduler_jobs 
+WHERE apscheduler_jobs.next_run_time IS NOT NULL ORDER BY apscheduler_jobs.next_run_time 
+ LIMIT %(param_1)s
+BEGIN (implicit)
+[cached since 1288s ago] {'param_1': 1}
+SELECT books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock 
+FROM books 
+WHERE books.book_id IN (%(book_id_1_1)s)
+[cached since 4.635s ago] {'book_id_1_1': 7}
+ROLLBACK
+BEGIN (implicit)
+UPDATE books SET stock=%(stock)s WHERE books.book_id = %(book_id_1)s RETURNING books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock
+[cached since 4.632s ago] {'stock': 63, 'book_id_1': 7}
+COMMIT
+SELECT apscheduler_jobs.id, apscheduler_jobs.job_state 
+FROM apscheduler_jobs 
+WHERE apscheduler_jobs.next_run_time <= %(next_run_time_1)s ORDER BY apscheduler_jobs.next_run_time
+[cached since 1308s ago] {'next_run_time_1': 1666083915.188929}
+DELETE FROM apscheduler_jobs WHERE apscheduler_jobs.id = %(id_1)s
+[cached since 24.49s ago] {'id_1': '77'}
+BEGIN (implicit)
+DELETE FROM carts WHERE carts.cart_id = %(cart_id_1)s RETURNING carts.cart_id, carts.email, carts.book_id
+[cached since 24.49s ago] {'cart_id_1': 77}
+COMMIT
+COMMIT
+SELECT apscheduler_jobs.next_run_time 
+FROM apscheduler_jobs 
+WHERE apscheduler_jobs.next_run_time IS NOT NULL ORDER BY apscheduler_jobs.next_run_time 
+ LIMIT %(param_1)s
+[cached since 1308s ago] {'param_1': 1}
+BEGIN (implicit)
+SELECT books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock 
+FROM books 
+WHERE books.book_id IN (%(book_id_1_1)s)
+[cached since 24.49s ago] {'book_id_1_1': 15}
+ROLLBACK
+BEGIN (implicit)
+UPDATE books SET stock=%(stock)s WHERE books.book_id = %(book_id_1)s RETURNING books.book_id, books.title, books.year_published, books.author, books.price, books.category_id, books.stock
+[cached since 24.49s ago] {'stock': 20, 'book_id_1': 15}
+COMMIT
+select pg_catalog.version()
+[raw sql] {}
+select current_schema()
+[raw sql] {}
+show standard_conforming_strings
+[raw sql] {}
+BEGIN (implicit)
+select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%(name)s
+[generated in 0.00018s] {'name': 'apscheduler_jobs'}
+COMMIT
+SELECT apscheduler_jobs.id, apscheduler_jobs.job_state 
+FROM apscheduler_jobs 
+WHERE apscheduler_jobs.next_run_time <= %(next_run_time_1)s ORDER BY apscheduler_jobs.next_run_time
+[generated in 0.00023s] {'next_run_time_1': 1666084776.092519}
+SELECT apscheduler_jobs.next_run_time 
+FROM apscheduler_jobs 
+WHERE apscheduler_jobs.next_run_time IS NOT NULL ORDER BY apscheduler_jobs.next_run_time 
+ LIMIT %(param_1)s
+[generated in 0.00023s] {'param_1': 1}
+ * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+Headers:
+Host: 127.0.0.1:5000
+Connection: keep-alive
+Sec-Ch-Ua: "Chromium";v="106", "Microsoft Edge";v="106", "Not;A=Brand";v="99"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.47
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,ro;q=0.8
+
+
+127.0.0.1 - - [18/Oct/2022 12:19:37] "GET / HTTP/1.1" 200 -
+Headers:
+Host: 127.0.0.1:5000
+Connection: keep-alive
+Sec-Ch-Ua: "Chromium";v="106", "Microsoft Edge";v="106", "Not;A=Brand";v="99"
+Sec-Ch-Ua-Mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.47
+Sec-Ch-Ua-Platform: "Windows"
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://127.0.0.1:5000/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,ro;q=0.8
+If-Modified-Since: Mon, 10 Oct 2022 12:44:46 GMT
+
+
+Headers:
+Host: 127.0.0.1:5000
+Connection: keep-alive
+Sec-Ch-Ua: "Chromium";v="106", "Microsoft Edge";v="106", "Not;A=Brand";v="99"
+Sec-Ch-Ua-Mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.47
+Sec-Ch-Ua-Platform: "Windows"
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://127.0.0.1:5000/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,ro;q=0.8
+If-Modified-Since: Mon, 10 Oct 2022 12:44:46 GMT
+
+
+Headers:
+Host: 127.0.0.1:5000
+Connection: keep-alive
+Sec-Ch-Ua: "Chromium";v="106", "Microsoft Edge";v="106", "Not;A=Brand";v="99"
+Sec-Ch-Ua-Mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.47
+Sec-Ch-Ua-Platform: "Windows"
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: script
+Referer: http://127.0.0.1:5000/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,ro;q=0.8
+If-Modified-Since: Mon, 10 Oct 2022 12:44:46 GMT
+
+
+Headers:
+Host: 127.0.0.1:5000
+Connection: keep-alive
+Sec-Ch-Ua: "Chromium";v="106", "Microsoft Edge";v="106", "Not;A=Brand";v="99"
+Sec-Ch-Ua-Mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.47
+Sec-Ch-Ua-Platform: "Windows"
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: script
+Referer: http://127.0.0.1:5000/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,ro;q=0.8
+If-Modified-Since: Mon, 10 Oct 2022 12:44:46 GMT
+
+
+127.0.0.1 - - [18/Oct/2022 12:19:37] "GET /swaggerui/droid-sans.css HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2022 12:19:37] "GET /swaggerui/swagger-ui.css HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2022 12:19:37] "GET /swaggerui/swagger-ui-bundle.js HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2022 12:19:37] "GET /swaggerui/swagger-ui-standalone-preset.js HTTP/1.1" 200 -
+Headers:
+Host: 127.0.0.1:5000
+Connection: keep-alive
+Sec-Ch-Ua: "Chromium";v="106", "Microsoft Edge";v="106", "Not;A=Brand";v="99"
+Accept: application/json,*/*
+Sec-Ch-Ua-Mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.47
+Sec-Ch-Ua-Platform: "Windows"
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://127.0.0.1:5000/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,ro;q=0.8
+
+
+127.0.0.1 - - [18/Oct/2022 12:19:38] "GET /swagger.json HTTP/1.1" 200 -
